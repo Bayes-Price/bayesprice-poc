@@ -142,67 +142,7 @@ const RubySolution = () => {
       {/* Technical Specifications */}
       <section className="py-16 md:py-24 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-5xl font-bold text-charcoal mb-4">
-                Technical Specifications
-              </h2>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-charcoal">System Requirements</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Windows 10/11 or Windows Server 2016+</li>
-                    <li>• 8GB RAM minimum (16GB recommended)</li>
-                    <li>• 500MB disk space for installation</li>
-                    <li>• .NET Framework 4.8 or higher</li>
-                    <li>• Network connectivity for cloud features</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-charcoal">Supported Formats</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• SPSS (.sav, .por)</li>
-                    <li>• Dimensions (.ddf, .mdd)</li>
-                    <li>• Triple-S (.sss, .xml)</li>
-                    <li>• CSV, Excel (.xlsx, .xls)</li>
-                    <li>• Qualtrics, SurveyMonkey exports</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-charcoal">Export Capabilities</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Excel with custom templates</li>
-                    <li>• PowerPoint with branding</li>
-                    <li>• Tableau data extracts</li>
-                    <li>• TSAPI for integration</li>
-                    <li>• Custom XML/JSON formats</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-charcoal">Storage Options</h3>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Local file system</li>
-                    <li>• Network file shares</li>
-                    <li>• Cloud storage (Azure, AWS, Google)</li>
-                    <li>• Version control integration</li>
-                    <li>• Encrypted storage support</li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+          
         </div>
       </section>
 
