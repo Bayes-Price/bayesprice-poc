@@ -7,23 +7,23 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
+    <nav className="fixed top-0 w-full bg-primary border-b border-primary z-50 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-charcoal">
+          <Link to="/" className="text-2xl font-bold text-primary-foreground">
             Bayes Price
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/" className="text-foreground hover:text-secondary transition-colors">
+            <Link to="/" className="text-primary-foreground hover:text-charcoal transition-colors font-medium">
               Home
             </Link>
-            <Link to="/about" className="text-foreground hover:text-secondary transition-colors">
+            <Link to="/about" className="text-primary-foreground hover:text-charcoal transition-colors font-medium">
               About
             </Link>
             <div className="relative group">
-              <span className="text-foreground hover:text-secondary transition-colors cursor-pointer">
+              <span className="text-primary-foreground hover:text-charcoal transition-colors cursor-pointer font-medium">
                 Solutions
               </span>
               <div className="absolute top-full left-0 mt-2 w-48 bg-card rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
@@ -47,17 +47,17 @@ const Navigation = () => {
                 </Link>
               </div>
             </div>
-            <Link to="/contact" className="text-foreground hover:text-secondary transition-colors">
+            <Link to="/contact" className="text-primary-foreground hover:text-charcoal transition-colors font-medium">
               Contact
             </Link>
-            <Button className="bg-gradient-primary text-primary-foreground hover:opacity-90">
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 shadow-coral">
               Book Discovery Session
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground"
+            className="md:hidden text-primary-foreground"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -69,47 +69,47 @@ const Navigation = () => {
           <div className="md:hidden py-4 space-y-4">
             <Link
               to="/"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               About
             </Link>
             <Link
               to="/solutions/platinum"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Platinum
             </Link>
             <Link
               to="/solutions/ruby"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Ruby
             </Link>
             <Link
               to="/solutions/services"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Professional Services
             </Link>
             <Link
               to="/contact"
-              className="block text-foreground hover:text-secondary transition-colors"
+              className="block text-primary-foreground hover:text-charcoal transition-colors font-medium"
               onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>
-            <Button className="w-full bg-gradient-primary text-primary-foreground">
+            <Button className="w-full bg-secondary text-secondary-foreground shadow-coral">
               Book Discovery Session
             </Button>
           </div>

@@ -51,14 +51,16 @@ export default {
           DEFAULT: "hsl(var(--charcoal))",
           light: "hsl(var(--charcoal-light))",
         },
-        "deep-blue": "hsl(var(--deep-blue))",
-        electric: {
-          DEFAULT: "hsl(var(--electric))",
-          glow: "hsl(var(--electric-glow))",
+        bayes: {
+          yellow: "hsl(var(--bayes-yellow))",
+          "yellow-light": "hsl(var(--bayes-yellow-light))",
+          coral: "hsl(var(--bayes-coral))",
+          "coral-dark": "hsl(var(--bayes-coral-dark))",
         },
       },
       backgroundImage: {
         "gradient-primary": "var(--gradient-primary)",
+        "gradient-accent": "var(--gradient-accent)",
         "gradient-hero": "var(--gradient-hero)",
         "gradient-card": "var(--gradient-card)",
       },
@@ -68,6 +70,7 @@ export default {
         lg: "var(--shadow-lg)",
         xl: "var(--shadow-xl)",
         glow: "var(--shadow-glow)",
+        coral: "var(--shadow-coral)",
       },
       transitionProperty: {
         base: "var(--transition-base)",
