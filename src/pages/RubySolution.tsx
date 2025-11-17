@@ -2,21 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Award,
-  Code,
-  Database,
-  Download,
-  FileSpreadsheet,
-  Settings,
-  Shield,
-  Workflow
-} from "lucide-react";
+import { Award, Code, Database, Download, FileSpreadsheet, Shield, Workflow } from "lucide-react";
 import rubyDesktop from "@/assets/ruby-desktop.jpg";
-
 const RubySolution = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -47,11 +36,7 @@ const RubySolution = () => {
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <img 
-                src={rubyDesktop} 
-                alt="Ruby Desktop Application" 
-                className="rounded-2xl shadow-xl"
-              />
+              <img src={rubyDesktop} alt="Ruby Desktop Application" className="rounded-2xl shadow-xl" />
               <div className="absolute -top-6 -right-6 bg-accent text-accent-foreground p-4 rounded-lg shadow-lg animate-float">
                 <Award size={32} />
               </div>
@@ -87,7 +72,7 @@ const RubySolution = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Settings className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Dual Interface</h3>
                 <p className="text-muted-foreground">
                   Intuitive GUI for quick tasks combined with powerful batch scripting 
@@ -304,8 +289,6 @@ const RubySolution = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default RubySolution;
