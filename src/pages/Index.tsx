@@ -282,7 +282,6 @@ const Index = () => {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <Award className="mx-auto text-accent" size={64} />
             <h2 className="text-3xl md:text-5xl font-bold text-charcoal">
               Award-Winning Technology
             </h2>
