@@ -2,18 +2,9 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Database,
-  BarChart3,
-  FileText,
-  Settings,
-  CheckCircle2,
-  Workflow
-} from "lucide-react";
-
+import { BarChart3, FileText, Settings, CheckCircle2, Workflow } from "lucide-react";
 const Services = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -46,7 +37,7 @@ const Services = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <Database className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">Data Connection & Integration</h3>
                 <p className="text-muted-foreground mb-4">
                   Seamlessly connect your data sources to our platforms with expert guidance.
@@ -301,8 +292,6 @@ const Services = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
