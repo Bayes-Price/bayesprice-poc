@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import bayesPriceLogo from "@/assets/bayes-price-logo.svg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,8 +11,8 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-primary border-b border-primary z-50 shadow-md">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold text-primary-foreground">
-            Bayes Price
+          <Link to="/" className="flex items-center">
+            <img src={bayesPriceLogo} alt="Bayes Price" className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
