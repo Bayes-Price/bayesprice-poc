@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Code, Database, Download, FileSpreadsheet, Shield } from "lucide-react";
+import { Award, Download } from "lucide-react";
 import rubyDesktop from "@/assets/ruby-desktop.jpg";
 const RubySolution = () => {
   return <div className="min-h-screen">
@@ -83,7 +83,7 @@ const RubySolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Database className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Universal Format Support</h3>
                 <p className="text-muted-foreground">
                   Works with all major survey data formats including SPSS, Dimensions, 
@@ -105,7 +105,7 @@ const RubySolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <FileSpreadsheet className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Flexible Export</h3>
                 <p className="text-muted-foreground">
                   Export to Excel, PowerPoint, Tableau, TSAPI, and custom formats 
@@ -116,7 +116,7 @@ const RubySolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Shield className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Deployment Flexibility</h3>
                 <p className="text-muted-foreground">
                   Deploy on cloud infrastructure, local servers, or individual 
@@ -127,7 +127,7 @@ const RubySolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Code className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Open-Source Scripting</h3>
                 <p className="text-muted-foreground">
                   Build custom automation workflows with our powerful, documented 
