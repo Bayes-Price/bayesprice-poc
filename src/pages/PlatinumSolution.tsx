@@ -2,21 +2,10 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Zap, 
-  Database, 
-  BarChart3, 
-  FileText,
-  Globe,
-  Clock,
-  Brain,
-  Workflow
-} from "lucide-react";
+import { Zap, Workflow } from "lucide-react";
 import platinumDashboard from "@/assets/platinum-dashboard.jpg";
-
 const PlatinumSolution = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -47,11 +36,7 @@ const PlatinumSolution = () => {
               </div>
             </div>
             <div className="relative animate-fade-in">
-              <img 
-                src={platinumDashboard} 
-                alt="Platinum Dashboard Interface" 
-                className="rounded-2xl shadow-xl"
-              />
+              <img src={platinumDashboard} alt="Platinum Dashboard Interface" className="rounded-2xl shadow-xl" />
             </div>
           </div>
         </div>
@@ -72,7 +57,7 @@ const PlatinumSolution = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Database className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Multi-Source Data Ingestion</h3>
                 <p className="text-muted-foreground">
                   Seamlessly integrate surveys, CRM feedback, social media, and internal data 
@@ -83,7 +68,7 @@ const PlatinumSolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Brain className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">AI-Driven Analysis</h3>
                 <p className="text-muted-foreground">
                   Advanced machine learning algorithms automatically analyze patterns, 
@@ -94,7 +79,7 @@ const PlatinumSolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <BarChart3 className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Automated Visualizations</h3>
                 <p className="text-muted-foreground">
                   Generate stunning, interactive charts and graphs automatically. 
@@ -105,7 +90,7 @@ const PlatinumSolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <FileText className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">PowerPoint Generation</h3>
                 <p className="text-muted-foreground">
                   Automatically create professional presentation decks with insights, 
@@ -116,7 +101,7 @@ const PlatinumSolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Globe className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Interactive Portal</h3>
                 <p className="text-muted-foreground">
                   Share insights with stakeholders through a secure, branded web portal 
@@ -127,7 +112,7 @@ const PlatinumSolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Clock className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Real-Time Dashboards</h3>
                 <p className="text-muted-foreground">
                   Monitor key metrics with live dashboards that update automatically 
@@ -280,8 +265,6 @@ const PlatinumSolution = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default PlatinumSolution;
