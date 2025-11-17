@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { BarChart3, FileText, Settings, CheckCircle2, Workflow } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 const Services = () => {
   return <div className="min-h-screen">
       <Navigation />
@@ -61,7 +61,7 @@ const Services = () => {
 
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <BarChart3 className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">AI-Enhanced Analysis</h3>
                 <p className="text-muted-foreground mb-4">
                   Leverage AI and human expertise for deeper insights and visualizations.
@@ -85,7 +85,7 @@ const Services = () => {
 
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <Workflow className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">Automation Services</h3>
                 <p className="text-muted-foreground mb-4">
                   Streamline workflows with automated tabulations and reporting.
@@ -109,7 +109,7 @@ const Services = () => {
 
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <FileText className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">Custom Reporting</h3>
                 <p className="text-muted-foreground mb-4">
                   Professional PowerPoint decks and standard tables tailored to your needs.
@@ -133,7 +133,7 @@ const Services = () => {
 
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <CheckCircle2 className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">Data Quality Assessment</h3>
                 <p className="text-muted-foreground mb-4">
                   Ensure accuracy and reliability with comprehensive quality checks.
@@ -157,7 +157,7 @@ const Services = () => {
 
             <Card className="hover:shadow-xl transition-shadow">
               <CardContent className="p-8 space-y-4">
-                <Settings className="text-secondary" size={48} />
+                
                 <h3 className="text-2xl font-bold text-charcoal">End-to-End Project Execution</h3>
                 <p className="text-muted-foreground mb-4">
                   Complete project management from design to delivery.
