@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Award, Code, Database, Download, FileSpreadsheet, Shield, Workflow } from "lucide-react";
+import { Award, Code, Database, Download, FileSpreadsheet, Shield } from "lucide-react";
 import rubyDesktop from "@/assets/ruby-desktop.jpg";
 const RubySolution = () => {
   return <div className="min-h-screen">
@@ -94,7 +94,7 @@ const RubySolution = () => {
 
             <Card>
               <CardContent className="p-6 space-y-4">
-                <Workflow className="text-secondary" size={40} />
+                
                 <h3 className="text-xl font-bold text-charcoal">Wave Management</h3>
                 <p className="text-muted-foreground">
                   Sophisticated wave-on-wave analysis tools for tracking changes 
