@@ -1,6 +1,6 @@
 # Bayes Price POC
 
-AI-Powered Business Intelligence platform combining AI automation with human insight.
+BP marketing website.
 
 ## Getting Started
 
