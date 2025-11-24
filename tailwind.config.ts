@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Instrument Sans", "sans-serif"],
+        heading: ["Outfit", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -52,10 +56,12 @@ export default {
           light: "hsl(var(--charcoal-light))",
         },
         bayes: {
+          blue: "hsl(var(--bayes-blue))",
+          "blue-light": "hsl(var(--bayes-blue-light))",
           yellow: "hsl(var(--bayes-yellow))",
           "yellow-light": "hsl(var(--bayes-yellow-light))",
           coral: "hsl(var(--bayes-coral))",
-          "coral-dark": "hsl(var(--bayes-coral-dark))",
+          "coral-light": "hsl(var(--bayes-coral-light))",
         },
       },
       backgroundImage: {

@@ -1,0 +1,81 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: bayesprice-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bayesprice
+      POSTGRES_USER: bayesprice_user
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bayesprice_dev_password}
+    ports:
+      - "5439:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U bayesprice_user -d bayesprice" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # API Server
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+      target: development
+    container_name: bayesprice-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://bayesprice_user:${POSTGRES_PASSWORD:-bayesprice_dev_password}@postgres:5432/bayesprice
+      RESEND_API_KEY: ${RESEND_API_KEY}
+      RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-onboarding@resend.dev}
+      RESEND_TO_EMAIL: ${RESEND_TO_EMAIL:-info@bayesprice.com}
+      PORT: 3001
+      NODE_ENV: ${NODE_ENV:-development}
+      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
+    ports:
+      - "3009:3001"
+    volumes:
+      - ./api/src:/app/src
+      - ./api/package.json:/app/package.json
+      - ./api/tsconfig.json:/app/tsconfig.json
+    command: sh -c "npm run db:migrate && npm run dev"
+    healthcheck:
+      test: [ "CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3001/api/discovery/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+  # Frontend (optional - you can also run this separately)
+  # Uncomment if you want to run frontend in Docker too
+  # frontend:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.frontend
+  #   container_name: bayesprice-frontend
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - api
+  #   environment:
+  #     VITE_API_URL: http://localhost:3001
+  #   ports:
+  #     - "5173:5173"
+  #   volumes:
+  #     - ./src:/app/src
+  #     - ./public:/app/public
+  #     - ./index.html:/app/index.html
+  #     - ./vite.config.ts:/app/vite.config.ts
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  default:
+    name: bayesprice-network
