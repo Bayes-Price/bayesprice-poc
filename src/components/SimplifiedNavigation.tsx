@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import bayesPriceLogo from "@/assets/bayes-price-logo.svg";
 
@@ -11,9 +10,9 @@ const SimplifiedNavigation = ({ onCtaClick }: SimplifiedNavigationProps) => {
         <nav className="fixed top-0 w-full bg-bayes-blue border-b border-white/10 z-50">
             <div className="container mx-auto px-6 lg:px-8">
                 <div className="flex items-center justify-between h-20">
-                    <Link to="/" className="flex items-center">
+                    <a href="https://www.bayesprice.com" className="flex items-center">
                         <img src={bayesPriceLogo} alt="Bayes Price" className="h-8 w-auto brightness-0 invert" />
-                    </Link>
+                    </a>
 
                     <Button
                         onClick={onCtaClick}
