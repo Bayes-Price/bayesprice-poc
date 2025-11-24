@@ -76,7 +76,7 @@ const DiscoveryLanding = () => {
                             <span className="text-bayes-yellow">Actionable Insights</span>
                         </h1>
                         <p className="text-xl md:text-2xl text-white/80 mb-10 leading-relaxed font-light">
-                            Book a free discovery session to explore how our AI-powered solutions can revolutionize your business intelligence.
+                            Book a free discovery session to explore how our solutions can revolutionise your business intelligence. We'll listen, learn, and share knowledge.
                         </p>
                         <Button
                             size="lg"
@@ -99,7 +99,7 @@ const DiscoveryLanding = () => {
                                 Why <span className="text-bayes-yellow">Bayes Price</span>?
                             </h2>
                             <p className="text-lg md:text-xl text-white/70 leading-relaxed">
-                                We combine cutting-edge AI technology with deep market research expertise to deliver
+                                We combine deep research expertise with cutting-edge AI technology to deliver
                                 business intelligence that drives real results.
                             </p>
                         </div>
@@ -111,10 +111,10 @@ const DiscoveryLanding = () => {
                                         <CheckCircle2 className="h-6 w-6 text-bayes-yellow" />
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-bold text-white mb-2">AI-Powered Intelligence</h3>
+                                        <h3 className="text-xl font-bold text-white mb-2">Humand Insights. AI-Powered.</h3>
                                         <p className="text-white/70">
-                                            Leverage advanced AI to automate analysis, uncover hidden patterns, and generate
-                                            insights faster than traditional methods.
+                                            Unlock value, automate analysis, uncover hidden patterns, and generate
+                                            insights across data silos.
                                         </p>
                                     </div>
                                 </div>
@@ -126,7 +126,7 @@ const DiscoveryLanding = () => {
                                     <div>
                                         <h3 className="text-xl font-bold text-white mb-2">Transform Weeks Into Minutes</h3>
                                         <p className="text-white/70">
-                                            Our automation reduces analysis time by 95%, giving you instant insights
+                                            Our automation reduces analysis time, giving you instant insights
                                             when you need them most.
                                         </p>
                                     </div>
@@ -141,8 +141,8 @@ const DiscoveryLanding = () => {
                                     <div>
                                         <h3 className="text-xl font-bold text-white mb-2">Expert Human Insight</h3>
                                         <p className="text-white/70">
-                                            Technology augmented by experienced analysts ensures accuracy, context,
-                                            and actionable recommendations.
+                                            Experienced analysts guide the methodology ensures reliabile,
+                                            actionable insights.
                                         </p>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@ const DiscoveryLanding = () => {
                                     <div>
                                         <h3 className="text-xl font-bold text-white mb-2">Award-Winning Solutions</h3>
                                         <p className="text-white/70">
-                                            Trusted by leading organizations and recognized for innovation in
+                                            Trusted by leading organisations and recognised for innovation in
                                             data analytics and business intelligence.
                                         </p>
                                     </div>
@@ -236,7 +236,7 @@ const DiscoveryLanding = () => {
                                 Platinum
                             </h3>
                             <p className="text-white/70 mb-6 leading-relaxed">
-                                AI-driven automated analysis platform that transforms weeks of work into minutes. Get instant insights from your data with our award-winning solution.
+                                AI-driven automated analysis platform that transforms weeks of work into minutes. Get richer, faster insights from your data.
                             </p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start gap-2 text-white/80">
@@ -245,7 +245,7 @@ const DiscoveryLanding = () => {
                                 </li>
                                 <li className="flex items-start gap-2 text-white/80">
                                     <CheckCircle2 className="h-5 w-5 text-bayes-yellow flex-shrink-0 mt-0.5" />
-                                    <span>Real-time dashboards</span>
+                                    <span>Interactive dashboards</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-white/80">
                                     <CheckCircle2 className="h-5 w-5 text-bayes-yellow flex-shrink-0 mt-0.5" />
@@ -263,7 +263,7 @@ const DiscoveryLanding = () => {
                                 Ruby
                             </h3>
                             <p className="text-white/70 mb-6 leading-relaxed">
-                                Professional-grade desktop application for comprehensive survey data management. Combine intuitive GUI with powerful batch scripting.
+                                Award winning desktop application for comprehensive survey data management. Combine intuitive GUI with powerful batch scripting.
                             </p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start gap-2 text-white/80">
