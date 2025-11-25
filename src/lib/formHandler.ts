@@ -1,6 +1,7 @@
 // API client for form submissions
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+// Use relative URL so it works through Caddy proxy, or use env variable if set
+const API_BASE_URL = import.meta.env.VITE_API_URL || '';
 
 export interface DiscoveryFormData {
     name: string;

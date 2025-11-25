@@ -3,11 +3,8 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-if (!process.env.RESEND_API_KEY) {
-  throw new Error('RESEND_API_KEY environment variable is not set');
-}
-
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Make RESEND_API_KEY optional - API will work without email functionality
+const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
 
 export interface EmailData {
   name: string;
@@ -18,12 +15,18 @@ export interface EmailData {
 }
 
 export async function sendDiscoveryNotification(data: EmailData): Promise<void> {
+  if (!resend) {
+    console.warn('⚠️ RESEND_API_KEY not set - skipping email notification');
+    return;
+  }
+  
   // Resend requires a verified domain or you can use 'onboarding@resend.dev' for testing
   // If you haven't verified 'bayesprice.com' on Resend yet, use the testing email
   const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
   const toEmail = process.env.RESEND_TO_EMAIL || 'info@bayesprice.com';
 
   try {
+    console.log(`📧 Attempting to send email from ${fromEmail} to ${toEmail}`);
     const { data: emailData, error } = await resend.emails.send({
       from: fromEmail,
       to: toEmail,
@@ -153,7 +156,7 @@ export async function sendDiscoveryNotification(data: EmailData): Promise<void> 
       throw error;
     }
 
-    console.log(`✅ Email sent successfully to ${toEmail}`);
+    console.log(`✅ Email sent successfully to ${toEmail}`, emailData ? `(ID: ${emailData.id})` : '');
   } catch (error) {
     console.error('❌ Error sending email:', error);
     throw error;
@@ -161,6 +164,11 @@ export async function sendDiscoveryNotification(data: EmailData): Promise<void> 
 }
 
 export async function sendConfirmationEmail(data: EmailData): Promise<void> {
+  if (!resend) {
+    console.warn('⚠️ RESEND_API_KEY not set - skipping confirmation email');
+    return;
+  }
+  
   const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
 
   try {
