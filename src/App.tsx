@@ -5,6 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
 import Index from "./pages/Index";
+import IndexV2 from "./pages/IndexV2";
+import IndexV3 from "./pages/IndexV3";
 import About from "./pages/About";
 import PlatinumSolution from "./pages/PlatinumSolution";
 import RubySolution from "./pages/RubySolution";
@@ -26,6 +28,8 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/v2" element={<IndexV2 />} />
+          <Route path="/v3" element={<IndexV3 />} />
           <Route path="/about" element={<About />} />
           <Route path="/works" element={<Works />} />
           <Route path="/solutions/platinum" element={<PlatinumSolution />} />

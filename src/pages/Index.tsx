@@ -1,433 +1,295 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import {
-  Zap,
-  Brain,
-  BarChart3,
-  TrendingUp,
-  Database,
-  ArrowRight,
-  DollarSign,
-  Headphones,
-  Clock,
-  Bell
-} from "lucide-react";
-import heroProfessional from "@/assets/hero-market-research.png";
-import platinumDashboard from "@/assets/platinum-dashboard.jpg";
-import rubyDesktop from "@/assets/ruby-desktop.jpg";
-// Note: In a real scenario, I would move the generated image to assets. 
-// For now, I will use the absolute path or a placeholder if I can't move it easily.
-// Since I can't move files to src/assets easily without a command, I'll assume I need to use the artifact path or copy it.
-// Actually, I should copy the file to the project assets first.
+import InsightsAnimation from "@/components/InsightsAnimation";
+import RotatingTestimonials from "@/components/RotatingTestimonials";
+import { ArrowRight } from "lucide-react";
+import dashboardImage from "@/assets/image.png";
+import platinumLogo from "@/assets/Platinum/platinumblue3.png";
+import rubyLogo from "@/assets/Ruby/rubyred3.png";
+import skyLogo from "/images/Sky.png";
+import okoLogo from "@/assets/logos/oko.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background font-sans selection:bg-bayes-yellow/20">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section - Noora Style */}
-      <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
-        {/* Background Image & Overlay */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroProfessional}
-            alt="Background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/60 to-transparent mix-blend-multiply" />
-          <div className="absolute inset-0 bg-gradient-to-br from-bayes-blue/40 to-background/60 mix-blend-overlay" />
-        </div>
-
-        <div className="container relative z-10 mx-auto px-6 lg:px-8 h-full flex flex-col pt-32 pb-12 min-h-screen justify-between">
-          {/* Top Area */}
-          <div className="flex flex-col md:flex-row justify-between items-start w-full">
-            <h1 className="text-7xl md:text-9xl font-bold text-white tracking-tighter">
-              Bayes Price
+      {/* Hero Section */}
+      <section className="pt-32 pb-8 md:pt-40 md:pb-8 relative z-0">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-heading font-bold text-charcoal leading-[1.1] mb-6">
+              Transform complex data into{" "}
+              <span className="text-yellow">clarity and action</span>
             </h1>
-
-            <div className="mt-12 md:mt-32 max-w-2xl text-right">
-              <h2 className="text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight">
-                Transform Data into Action.
-              </h2>
-            </div>
-          </div>
-
-          {/* Bottom Area */}
-          <div className="flex flex-col md:flex-row justify-between items-end gap-12">
-            <div className="max-w-xl space-y-8">
-              <p className="text-xl md:text-2xl text-white/90 leading-relaxed font-light">
-                Not just another agency.<br />
-                <span className="font-medium text-bayes-yellow">Bayes Price</span> combines AI-powered software with human expertise to deliver business intelligence that drives decisions.
-              </p>
-              <Button size="lg" className="bg-bayes-yellow text-bayes-blue hover:bg-bayes-yellow-light rounded-full px-8 py-6 text-lg font-medium border-none">
-                Book a meeting
-              </Button>
-            </div>
-
-            {/* Card */}
-            <div className="relative w-full md:w-[400px] group cursor-pointer">
-              <Link to="/solutions/platinum">
-                <div className="relative rounded-2xl overflow-hidden aspect-[4/3] border border-white/10">
-                  <img src={platinumDashboard} alt="Platinum" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
-                  <div className="absolute bottom-0 left-0 p-6">
-                    <h3 className="text-white text-xl font-bold mb-1">Platinum Solution</h3>
-                    <p className="text-white/80 text-sm">AI-driven automated analysis</p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section - Noora Style */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-12">
-              We help ambitious teams build <span className="text-bayes-yellow">intelligence systems</span> that earn attention. From data ingestion to insight, every detail is crafted to make your business look <span className="text-bayes-yellow">confident</span> and perform better.
-            </h2>
-            <div className="pt-8">
-              <Link to="/about">
-                <Button variant="outline" className="bg-transparent border-gray-300 text-gray-900 hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-none px-6 py-3 text-sm font-medium transition-colors">
-                  More About Us
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-24 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-16">
-              We focus on making your business stand out with work that's <span className="text-bayes-yellow">useful</span>, <span className="text-bayes-yellow">flexible</span>, and built for the <span className="text-bayes-yellow">long term</span>.
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 mb-16 max-w-3xl">
-              Our clients come to us because they want more than good-looking dashboards. They want <span className="text-bayes-yellow">intelligence</span> that solves problems, systems that resonate, and insights that actually <span className="text-bayes-yellow">perform</span>.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 pt-8">
-              {/* Flexible Pricing Card */}
-              <div className="bg-white p-8 border border-gray-200 hover:border-bayes-yellow transition-colors shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <DollarSign className="text-bayes-yellow" size={24} />
-                  <h3 className="text-lg font-semibold text-gray-900">Flexible pricing</h3>
-                </div>
-                <p className="text-xl font-semibold text-gray-900 mb-8 leading-tight">
-                  Clear packages for different stages of growth.
-                </p>
-                <div className="space-y-4">
-                  <div className="text-sm text-gray-600">Starting from</div>
-                  <div className="text-3xl font-bold text-gray-900">$2,500</div>
-                  <div className="pt-4">
-                    <div className="relative w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-                      <div className="absolute left-0 top-0 h-full w-2/3 bg-bayes-coral rounded-full"></div>
-                      <div className="absolute left-2/3 top-1/2 -translate-y-1/2 w-4 h-4 bg-bayes-coral rounded-full -translate-x-1/2"></div>
-                    </div>
-                    <div className="flex justify-between mt-2 text-xs text-gray-500">
-                      <span>Start simple</span>
-                      <span>Expand as you go</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Priority Support Card */}
-              <div className="bg-white p-8 border border-gray-200 hover:border-bayes-yellow transition-colors shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <Headphones className="text-bayes-yellow" size={24} />
-                  <h3 className="text-lg font-semibold text-gray-900">Priority support</h3>
-                </div>
-                <p className="text-xl font-semibold text-gray-900 mb-8 leading-tight">
-                  Fast communication and quick turnaround on feedback.
-                </p>
-                <div className="relative mt-8 flex justify-center">
-                  <div className="relative w-28 h-56 bg-gray-100 rounded-[2rem] border-2 border-gray-200 p-3 flex flex-col">
-                    <div className="text-[10px] text-gray-500 mb-2 text-center">27/7 Support</div>
-                    <div className="flex-1"></div>
-                    <div className="absolute top-1 left-1/2 -translate-x-1/2 w-[calc(100%-8px)] bg-bayes-coral rounded-lg p-2.5 text-white text-[10px] shadow-lg">
-                      <div className="flex items-start justify-between mb-1">
-                        <span className="font-semibold text-[11px]">TRELLO</span>
-                        <span className="text-white/80 text-[9px]">1m ago</span>
-                      </div>
-                      <div className="text-white/90 leading-tight">[...] Requested design change</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Fast Turnarounds Card */}
-              <div className="bg-white p-8 border border-gray-200 hover:border-bayes-yellow transition-colors shadow-sm">
-                <div className="flex items-center gap-3 mb-6">
-                  <Clock className="text-bayes-yellow" size={24} />
-                  <h3 className="text-lg font-semibold text-gray-900">Fast turnarounds</h3>
-                </div>
-                <p className="text-xl font-semibold text-gray-900 mb-8 leading-tight">
-                  Days, not weeks. We keep projects moving.
-                </p>
-                <div className="space-y-4 mt-8">
-                  <div className="relative w-24 h-24 mx-auto">
-                    <div className="absolute inset-0 rounded-full border-2 border-gray-200"></div>
-                    <div className="absolute inset-2 rounded-full border border-gray-100"></div>
-                    {/* Clock hands pointing to ~10:10 */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 origin-center">
-                      {/* Hour hand */}
-                      <div className="absolute w-0.5 h-4 bg-bayes-coral origin-bottom rotate-[135deg] -translate-x-1/2"></div>
-                      {/* Minute hand */}
-                      <div className="absolute w-0.5 h-6 bg-bayes-coral origin-bottom rotate-[135deg] -translate-x-1/2"></div>
-                    </div>
-                  </div>
-                  <div className="text-sm text-gray-600 text-center">Time to complete</div>
-                  <div className="text-3xl font-bold text-gray-900 text-center">24-36h</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solutions Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-16">
-              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-6">
-                Our <span className="text-bayes-yellow">Solutions</span>
-              </h2>
-              <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
-                Award-winning technology that transforms how you work with data. Featured work between ©2024-25
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
-              {/* Platinum Card */}
-              <div className="group">
-                <div className="mb-6 overflow-hidden rounded-lg border border-gray-200">
-                  <img
-                    src={platinumDashboard}
-                    alt="Platinum Dashboard"
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mb-2">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-semibold">AI-Powered</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Platinum</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Ground-breaking speed to insight. AI-driven automated analysis & visualizations that transform months of data into minutes of understanding.
-                </p>
-                <Link to="/solutions/platinum">
-                  <Button variant="outline" className="bg-transparent border-gray-300 text-gray-900 hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-none px-6 py-3 text-sm font-medium transition-colors">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-
-              {/* Ruby Card */}
-              <div className="group">
-                <div className="mb-6 overflow-hidden rounded-lg border border-gray-200">
-                  <img
-                    src={rubyDesktop}
-                    alt="Ruby Desktop"
-                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mb-2">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-semibold">Award Winner</span>
-                </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ruby</h3>
-                <p className="text-gray-700 mb-6 leading-relaxed">
-                  Award-winning survey data processing. GUI + open-source batch scripting that supports all survey data formats.
-                </p>
-                <Link to="/solutions/ruby">
-                  <Button variant="outline" className="bg-transparent border-gray-300 text-gray-900 hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-none px-6 py-3 text-sm font-medium transition-colors">
-                    Learn More
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology Section */}
-      <section className="py-24 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-12">
-              The best results don't come from <span className="text-bayes-yellow">guesswork</span>. They come from a <span className="text-bayes-yellow">proven process</span>.
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-3xl leading-relaxed">
-              We start with research and strategy, shape it into a strong creative direction, and deliver intelligence systems that align with your goals. Simple, effective, and always tailored to your business.
-            </p>
-            <div className="flex flex-wrap gap-4">
-              <Link to="/solutions/services">
-                <Button variant="outline" className="bg-transparent border-gray-300 text-gray-900 hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-none px-6 py-3 text-sm font-medium transition-colors">
-                  Discover Our Methodology
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-12">
-              We are a <span className="text-bayes-yellow">full-service intelligence agency</span> specializing in AI-powered analytics, data processing, and business intelligence for ambitious businesses.
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 mb-16 max-w-3xl leading-relaxed">
-              Our services are built to give your business everything it needs to stand out, connect with data, and grow. From complete data transformations to digital products, we combine creativity and strategy to deliver systems that perform in the real world.
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <div>
-                <h3 className="text-sm font-semibold text-bayes-yellow uppercase tracking-wider mb-6">Expertise:</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>AI-Powered Analytics</li>
-                  <li>Data Strategy</li>
-                  <li>Business Intelligence</li>
-                  <li>Dashboard Design</li>
-                  <li>Data Processing</li>
-                  <li>Survey Analysis</li>
-                  <li>Development</li>
-                  <li>System Integration</li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-sm font-semibold text-bayes-yellow uppercase tracking-wider mb-6">Fields:</h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li>Financial Services</li>
-                  <li>Brands</li>
-                  <li>Technology</li>
-                  <li>Pharmaceutical</li>
-                  <li>Charities</li>
-                  <li>Startups</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 md:py-32 bg-background text-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-16">
-              Evidence Matters
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              {/* Testimonial Card 1 */}
-              <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <p className="text-lg text-white/80 leading-relaxed mb-6 font-light">
-                  "The team at Bayes Price have been instrumental at getting to the insight in our data. Beyond data processing, the team are very skilled at visualisations, automations and integration of more complex algorithms and segmentations into our data."
-                </p>
-                <div className="space-y-1">
-                  <div className="font-semibold text-bayes-yellow">John-William Awbrey</div>
-                  <div className="text-white/60 text-sm">Head of Brand & Campaign Insights</div>
-                  <div className="text-white/60 text-sm">Sky Central</div>
-                </div>
-              </div>
-
-              {/* Testimonial Card 2 */}
-              <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <p className="text-lg text-white/80 leading-relaxed mb-6 font-light">
-                  "Bayes Price are a regular partner in providing quantitative research. It's important for us that they have similar ethics and dedication to quality, and work in similar ways. They're quick, efficient, great at problem-solving, and reliably get things done."
-                </p>
-                <div className="space-y-1">
-                  <div className="font-semibold text-bayes-yellow">Jeremy Rix</div>
-                  <div className="text-white/60 text-sm">Managing Director</div>
-                  <div className="text-white/60 text-sm">OKO</div>
-                </div>
-              </div>
-
-              {/* Testimonial Card 3 */}
-              <div className="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <div className="font-semibold mb-4 text-bayes-yellow">MRS Award Winner:</div>
-                <p className="text-lg text-white/80 leading-relaxed mb-6 font-light">
-                  "An excellent solution. The integrated approach to merging data, simplifying communication, delivering interactive results, and automating all these through a single scripting language should significantly reduce errors, turnaround time, and cost."
-                </p>
-                <div className="space-y-1">
-                  <div className="font-semibold text-white">Judges - MRS/ASC Award</div>
-                  <div className="text-white/60 text-sm">for Technology & Innovation</div>
-                </div>
-              </div>
-            </div>
-            <div className="text-center">
-              <Link to="/works">
-                <Button variant="outline" className="bg-transparent border-white/20 text-white hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-full px-8 py-6 text-base font-medium transition-all">
-                  View All Projects
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Awards Section */}
-      <section className="py-24 md:py-32 bg-white/5">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-16">
-              Award-Winning Technology
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">
-                  MRS Technology & Innovation Award
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  Recognized for integration, automation, and error reduction excellence. Judges praised our innovative approach to combining AI with traditional research methods.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold text-white mb-4">
-                  Insight250 Winner 2024
-                </h3>
-                <p className="text-white/70 leading-relaxed">
-                  Matt Gibbs honored for innovation in insight generation, recognizing leadership in transforming how businesses extract value from data.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight mb-8">
-              If your data feels <span className="text-bayes-yellow">disconnected</span>, your insights aren't pulling their weight, or you're simply ready to look more <span className="text-bayes-yellow">professional</span>, Bayes Price is here to help.
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
-              Reach out today and you'll get a clear plan, honest advice, and a team that cares about the outcome as much as you do.
+            <p className="text-lg md:text-xl text-charcoal/60 mb-8 max-w-2xl mx-auto">
+              Advanced data integration for decision-makers who need to navigate
+              data effectively. From raw data to actionable insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-bayes-yellow text-bayes-blue hover:bg-bayes-yellow-light rounded-none px-8 py-6 text-base font-medium border-none">
-                Book a Demo
-              </Button>
-              <Link to="/contact">
-                <Button size="lg" variant="outline" className="bg-transparent border-gray-300 text-gray-900 hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-none px-8 py-6 text-base font-medium">
-                  Contact Us
-                </Button>
+              <Link
+                to="/discovery"
+                className="inline-flex items-center justify-center gap-2 bg-charcoal text-white px-6 py-3 rounded-full font-medium hover:bg-charcoal/90 transition-colors"
+              >
+                Get Started
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                to="/about"
+                className="inline-flex items-center justify-center gap-2 text-charcoal px-6 py-3 rounded-full font-medium border border-charcoal/20 hover:border-charcoal/40 transition-colors"
+              >
+                Learn More
               </Link>
             </div>
           </div>
+
+          {/* Dashboard Screenshot */}
+          <div className="mt-16 mb-[-60px] max-w-5xl mx-auto">
+            <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+              <img
+                src={dashboardImage}
+                alt="Bayes Price Dashboard"
+                className="w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By */}
+      <section className="pt-12 pb-12 border-y border-gray-100 relative z-10 bg-white">
+        <div className="container mx-auto px-6">
+          <p className="text-sm text-charcoal/40 text-center mb-8">Trusted by leading research teams</p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {/* Client Logos */}
+            <img
+              src={skyLogo}
+              alt="Sky"
+              className="h-10 w-auto"
+            />
+            <img
+              src={okoLogo}
+              alt="OKO"
+              style={{ width: 90, height: 'auto' }}
+            />
+            {/* Placeholder logos - replace with actual assets */}
+            <span className="text-charcoal/60 font-semibold text-lg">Beat Grid</span>
+            <span className="text-charcoal/60 font-semibold text-lg">Global Data</span>
+            <span className="text-charcoal/60 font-semibold text-lg">Channel 4</span>
+            <span className="text-charcoal/60 font-semibold text-lg">Intent Based Leadership</span>
+            <span className="text-charcoal/60 font-semibold text-lg">Fans Track</span>
+          </div>
+          {/* Industry Bodies */}
+          <div className="flex flex-wrap justify-center items-center gap-8 mt-6 pt-6 border-t border-gray-100">
+            <p className="text-xs text-charcoal/40 mr-4">Industry accreditations:</p>
+            <span className="text-charcoal/50 font-medium">MRS</span>
+            <span className="text-charcoal/50 font-medium">TSAPI</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Data to Insights Animation */}
+      <InsightsAnimation />
+
+      {/* What We Do */}
+      <section className="py-24 md:py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
+              Two powerful solutions
+            </h2>
+            <p className="text-charcoal/60">
+              Whether you need a cloud platform or desktop software, we have you covered.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Platinum Card */}
+            <Link
+              to="/solutions/platinum"
+              className="group p-8 bg-blue/5 border border-blue/20 rounded-2xl hover:border-blue/40 transition-colors"
+            >
+              <img src={platinumLogo} alt="Platinum" className="w-full mb-6" />
+              <h3 className="text-xl font-bold text-charcoal mb-2">Platinum Platform</h3>
+              <p className="text-charcoal/60 mb-4">
+                AI-powered cloud analytics. Interactive dashboards, automated processing,
+                team collaboration.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-charcoal group-hover:gap-2 transition-all">
+                Learn more <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+
+            {/* Ruby Card */}
+            <Link
+              to="/solutions/ruby"
+              className="group p-8 bg-red/5 border border-red/20 rounded-2xl hover:border-red/40 transition-colors"
+            >
+              <img src={rubyLogo} alt="Ruby" className="w-full mb-6" />
+              <h3 className="text-xl font-bold text-charcoal mb-2">Ruby Desktop</h3>
+              <p className="text-charcoal/60 mb-4">
+                Professional survey data processing. SPSS integration, powerful scripting,
+                local control.
+              </p>
+              <span className="inline-flex items-center gap-1 text-sm font-medium text-charcoal group-hover:gap-2 transition-all">
+                Learn more <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Client - Sky */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="max-w-5xl mx-auto">
+            {/* Sky Logo */}
+            <div className="flex justify-center mb-12">
+              <img
+                src={skyLogo}
+                alt="Sky"
+                className="h-24 md:h-32 w-auto"
+              />
+            </div>
+
+            {/* Testimonials Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Director Quote */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                <div className="mb-6">
+                  <svg className="h-10 w-10 text-yellow/60" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-charcoal text-lg leading-relaxed mb-6">
+                  We've worked closely with Bayes Price for several years. We are now excited to be working in close collaboration on developing the Platinum software which we believe addresses key challenges around speed to insight, maximising value of our data sources and improving accessibility of insight.
+                </p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-charcoal font-medium">Director of Research</p>
+                  <p className="text-charcoal/60 text-sm">Sky</p>
+                </div>
+              </div>
+
+              {/* Head of Brand Quote */}
+              <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200">
+                <div className="mb-6">
+                  <svg className="h-10 w-10 text-yellow/60" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                  </svg>
+                </div>
+                <p className="text-charcoal text-lg leading-relaxed mb-6">
+                  The team at Bayes Price have been instrumental at getting to the insight in our data. Beyond data processing, the team are very skilled at visualisations, automations and integration of complex algorithms and segmentations into our data.
+                </p>
+                <div className="border-t border-gray-200 pt-4">
+                  <p className="text-charcoal font-medium">Head of Brand & Campaign Insights</p>
+                  <p className="text-charcoal/60 text-sm">Sky</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* More Testimonials */}
+      <section className="py-24 md:py-32 bg-charcoal">
+        <div className="container mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white text-center mb-16">
+            What our clients say
+          </h2>
+
+          <RotatingTestimonials
+            testimonials={[
+              {
+                quote: "Bayes Price are a regular partner in providing quantitative research. They're quick, efficient, great at problem-solving.",
+                title: "Managing Director",
+                company: "OKO"
+              },
+              {
+                quote: "An excellent solution. The integrated approach should significantly reduce errors, turnaround time, and cost.",
+                title: "MRS/ASC Judges",
+                company: "Technology & Innovation Award"
+              },
+              {
+                // TODO: Replace with actual Fiona quote for services
+                quote: "Their services team consistently delivers exceptional quality and turnaround times.",
+                title: "Client Services",
+                company: "Bayes Price Services"
+              },
+              {
+                // TODO: Replace with actual Sky Ireland quote
+                quote: "Fantastic partnership that has transformed how we approach data insights.",
+                title: "Research Team",
+                company: "Sky Ireland"
+              }
+            ]}
+            interval={5000}
+          />
+        </div>
+      </section>
+
+      {/* Features */}
+      <section className="py-24 md:py-32">
+        <div className="container mx-auto px-6">
+          <div className="max-w-2xl mx-auto text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
+              Built for research teams
+            </h2>
+            <p className="text-charcoal/60">
+              Everything you need to process, analyze, and visualize survey data.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center">
+              <div className="w-12 h-12 bg-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-blue font-bold">1</span>
+              </div>
+              <h3 className="font-bold text-charcoal mb-2">Data Processing</h3>
+              <p className="text-sm text-charcoal/60">
+                Automated cleaning, weighting, and validation of survey data.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-green/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-green font-bold">2</span>
+              </div>
+              <h3 className="font-bold text-charcoal mb-2">Analysis</h3>
+              <p className="text-sm text-charcoal/60">
+                Powerful statistical analysis with AI-powered insights.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-12 h-12 bg-pink/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <span className="text-pink font-bold">3</span>
+              </div>
+              <h3 className="font-bold text-charcoal mb-2">Visualization</h3>
+              <p className="text-sm text-charcoal/60">
+                Beautiful charts and dashboards that tell your story.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 bg-yellow">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
+            Ready to get started?
+          </h2>
+          <p className="text-charcoal/70 mb-8 max-w-lg mx-auto">
+            Book a discovery call and see how Bayes Price can transform your data workflow.
+          </p>
+          <Link
+            to="/discovery"
+            className="inline-flex items-center justify-center gap-2 bg-charcoal text-white px-8 py-4 rounded-full font-medium hover:bg-charcoal/90 transition-colors"
+          >
+            Book a Discovery Call
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 

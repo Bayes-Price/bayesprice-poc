@@ -1,172 +1,162 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Download, Layers, FileCode, Globe, Database, Server, Settings } from "lucide-react";
+import { ArrowRight, Award, Layers, FileCode, Globe, Database, Server, Settings, MessageSquare } from "lucide-react";
 import rubyDesktop from "@/assets/ruby-desktop.jpg";
-import heroProfessional from "@/assets/hero-professional.jpg";
 
 const RubySolution = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-white">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src={heroProfessional}
-            alt="Background"
-            className="w-full h-full object-cover opacity-30"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/80 to-background" />
-        </div>
-
-        <div className="container relative z-10 mx-auto px-6 lg:px-8 pt-20">
-          <div className="max-w-4xl animate-fade-in-up">
-            <div className="inline-block border border-white/20 bg-white/5 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 text-white/80">
+      {/* Hero Section - Finta Style */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50/70 via-blue-50/30 to-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="inline-block border border-coral/20 bg-coral/5 px-4 py-2 rounded-full text-sm font-medium mb-6 text-coral">
               Award-Winning Desktop Application
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-8 text-white">
-              Ruby <br />
-              <span className="text-bayes-yellow">Survey Processing.</span>
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
+              Ruby Survey Processing
             </h1>
-            <p className="text-xl md:text-2xl text-white/80 max-w-2xl leading-relaxed font-light mb-10">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Professional-grade desktop application combining intuitive GUI with powerful
               open-source batch scripting for comprehensive survey data management.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-bayes-yellow text-bayes-blue hover:bg-bayes-yellow-light rounded-full px-8 py-6 text-lg font-medium border-none">
-                Download Trial
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="coral" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+                <a href="/discovery">
+                  Book a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-full px-8 py-6 text-lg font-medium transition-all">
-                View Pricing
-              </Button>
+            </div>
+          </div>
+
+          {/* Product Screenshot */}
+          <div className="max-w-5xl mx-auto mt-16">
+            <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-200 bg-white">
+              <img
+                src={rubyDesktop}
+                alt="Ruby Desktop Application"
+                className="w-full"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* Award Banner */}
-      <section className="py-12 bg-white/5 border-y border-white/10">
+      <section className="py-12 bg-secondary/30 border-y border-gray-100">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="w-16 h-16 rounded-full bg-bayes-yellow flex items-center justify-center flex-shrink-0">
-              <Award className="text-bayes-blue" size={32} />
+            <div className="w-16 h-16 rounded-full bg-coral flex items-center justify-center flex-shrink-0">
+              <Award className="text-white" size={32} />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-1">MRS Technology & Innovation Award Winner</h3>
-              <p className="text-white/60">Recognized for excellence in integration and automation.</p>
+              <h3 className="text-xl font-semibold text-foreground mb-1">MRS Technology & Innovation Award Winner</h3>
+              <p className="text-muted-foreground">Recognized for excellence in integration and automation.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Feature Grid (Works Style) */}
-      <section className="py-24 md:py-32 bg-background">
+      {/* Core Features Section */}
+      <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-16 animate-fade-in-up">
-              Core Features
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-foreground leading-tight">
+                Core Features
+              </h2>
+            </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Feature 1 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Layers className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <Layers className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Interface</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Interface</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Dual Interface</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Dual Interface</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Intuitive GUI for quick tasks combined with powerful batch scripting
                   for complex automation workflows.
                 </p>
               </div>
 
               {/* Feature 2 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <FileCode className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <FileCode className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Compatibility</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Compatibility</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Universal Support</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Universal Support</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Works with all major survey data formats including SPSS, Dimensions,
                   Qualtrics, SurveyMonkey, and more.
                 </p>
               </div>
 
               {/* Feature 3 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Settings className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <Settings className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Analysis</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Analysis</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Wave Management</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Wave Management</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Sophisticated wave-on-wave analysis tools for tracking changes
                   and trends across multiple data collection periods.
                 </p>
               </div>
 
               {/* Feature 4 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Globe className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <Globe className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Output</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Output</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Flexible Export</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Flexible Export</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Export to Excel, PowerPoint, Tableau, TSAPI, and custom formats
                   with full control over layout and styling.
                 </p>
               </div>
 
               {/* Feature 5 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Server className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <Server className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Infrastructure</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Infrastructure</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Deployment Flexibility</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Deployment Flexibility</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Deploy on cloud infrastructure, local servers, or individual
                   workstations based on your security requirements.
                 </p>
               </div>
 
               {/* Feature 6 */}
-              <div className="group cursor-pointer animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-                <div className="aspect-[4/3] bg-white/5 mb-6 overflow-hidden rounded-2xl relative border border-white/10 group-hover:border-bayes-yellow transition-colors">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Database className="text-white/20 group-hover:text-bayes-yellow transition-colors" size={64} />
-                  </div>
+              <div className="group">
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
+                  <Database className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-bayes-yellow uppercase tracking-wider font-medium">Automation</span>
+                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Automation</span>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">Open-Source Scripting</h3>
-                <p className="text-white/60 text-base leading-relaxed">
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Open-Source Scripting</h3>
+                <p className="text-muted-foreground text-base leading-relaxed">
                   Build custom automation workflows with our powerful, documented
                   scripting language for repeatable processes.
                 </p>
@@ -176,11 +166,11 @@ const RubySolution = () => {
         </div>
       </section>
 
-      {/* Use Cases Section (List Style) */}
-      <section className="py-24 md:py-32 bg-muted/5">
+      {/* Use Cases Section */}
+      <section className="py-24 md:py-32 bg-secondary/30">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-16 animate-fade-in-up">
+            <h2 className="text-3xl md:text-4xl font-heading font-normal text-foreground mb-16">
               Who Uses Ruby?
             </h2>
 
@@ -203,11 +193,11 @@ const RubySolution = () => {
                   desc: "Analyze survey data from multiple sources with professional-grade tools at an accessible price point for research budgets."
                 }
               ].map((item, index) => (
-                <div key={index} className="group border-b border-white/10 pb-8 animate-fade-in-up" style={{ animationDelay: `${0.2 + index * 0.1}s` }}>
+                <div key={index} className="group border-b border-gray-200 pb-8 last:border-0">
                   <div className="grid md:grid-cols-3 gap-8">
-                    <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                    <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
                     <div className="md:col-span-2">
-                      <p className="text-white/80 leading-relaxed">{item.desc}</p>
+                      <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -218,27 +208,24 @@ const RubySolution = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-background border-t border-white/10">
+      <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in-up">
-            <Download className="mx-auto text-bayes-yellow mb-6" size={48} />
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-8">
-              Try Ruby Today
+          <div className="max-w-4xl mx-auto text-center">
+            <MessageSquare className="mx-auto text-coral mb-6" size={48} />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-foreground leading-tight mb-8">
+              Discuss Your Requirements
             </h2>
-            <p className="text-xl text-white/60 mb-12 max-w-2xl mx-auto">
-              Download a free 30-day trial and experience award-winning survey data processing.
+            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+              Speak with our team to learn how Ruby can transform your survey data processing workflow.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-bayes-yellow text-bayes-blue hover:bg-bayes-yellow-light rounded-full px-8 py-6 text-lg font-medium border-none">
-                Download Free Trial
-              </Button>
-              <Button size="lg" variant="outline" className="border-white/20 bg-transparent text-white hover:bg-bayes-yellow hover:text-bayes-blue hover:border-bayes-yellow rounded-full px-8 py-6 text-lg font-medium transition-all">
-                View Documentation
+              <Button size="lg" variant="coral" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+                <a href="/discovery">
+                  Book a Consultation
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </div>
-            <p className="text-sm text-white/40 pt-6">
-              No credit card required • Full functionality • 30-day trial period
-            </p>
           </div>
         </div>
       </section>

@@ -1,113 +1,118 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-
-const articles = [
-    {
-        id: 1,
-        title: "The Future of AI in Business Intelligence",
-        category: "AI & Tech",
-        date: "Nov 20, 2025",
-        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    },
-    {
-        id: 2,
-        title: "Understanding Consumer Behavior Through Data",
-        category: "Insights",
-        date: "Nov 15, 2025",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    },
-    {
-        id: 3,
-        title: "Bayes Price Wins Innovation Award",
-        category: "Company News",
-        date: "Nov 10, 2025",
-        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    },
-    {
-        id: 4,
-        title: "Optimizing Your Data Strategy for 2026",
-        category: "Strategy",
-        date: "Nov 05, 2025",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    },
-    {
-        id: 5,
-        title: "The Role of Automation in Market Research",
-        category: "Automation",
-        date: "Oct 28, 2025",
-        image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    },
-    {
-        id: 6,
-        title: "Case Study: Retail Giant Boosts Sales by 20%",
-        category: "Case Studies",
-        date: "Oct 20, 2025",
-        image: "https://images.unsplash.com/photo-1556740758-90de374c12ad?auto=format&fit=crop&q=80&w=800",
-        link: "#"
-    }
-];
+import Navigation from "@/components/Navigation"
+import Footer from "@/components/Footer"
+import { ArrowRight, Linkedin } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const News = () => {
-    return (
-        <div className="min-h-screen bg-background text-foreground">
-            <Navigation />
+  return (
+    <div className="min-h-screen bg-white">
+      <Navigation />
 
-            <div className="container mx-auto px-6 lg:px-8 pt-32 pb-24">
-                {/* Hero Section */}
-                <div className="mb-24 animate-fade-in-up">
-                    <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] mb-8 text-white">
-                        We share <br />
-                        <span className="text-bayes-yellow">ideas...</span>
-                    </h1>
-                    <p className="text-xl text-white/60 max-w-md leading-relaxed">
-                        Latest updates, insights, and thoughts from the team at Bayes Price.
-                    </p>
-                </div>
+      {/* Hero Section */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50/70 via-blue-50/30 to-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
+              We share ideas
+            </h1>
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
+              Latest updates, insights, and thoughts from the team at Bayes Price.
+            </p>
+          </div>
+        </div>
+      </section>
 
-                {/* Articles Grid */}
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-                    {articles.map((article, index) => (
-                        <Link
-                            key={article.id}
-                            to={article.link}
-                            className="group block animate-fade-in-up"
-                            style={{ animationDelay: `${index * 0.1}s` }}
-                        >
-                            <div className="relative aspect-[4/3] mb-6 overflow-hidden rounded-lg bg-white/5">
-                                <img
-                                    src={article.image}
-                                    alt={article.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute top-4 left-4 bg-bayes-blue/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium text-white border border-white/10">
-                                    {article.category}
-                                </div>
-                            </div>
+      {/* LinkedIn Feed Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            {/* LinkedIn Embed Container */}
+            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl border border-gray-200 p-8 md:p-12 text-center">
+              <div className="w-16 h-16 rounded-full bg-[#0A66C2]/10 flex items-center justify-center mx-auto mb-6">
+                <Linkedin className="text-[#0A66C2]" size={32} />
+              </div>
 
-                            <div className="space-y-3">
-                                <div className="text-sm text-white/40">{article.date}</div>
-                                <h3 className="text-2xl font-bold leading-tight text-white group-hover:text-bayes-yellow transition-colors">
-                                    {article.title}
-                                </h3>
-                                <div className="flex items-center text-sm font-medium text-white/60 group-hover:text-bayes-yellow transition-colors mt-4">
-                                    Read Article <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
+              <h2 className="text-2xl md:text-3xl font-heading font-semibold text-foreground mb-4">
+                Follow us on LinkedIn
+              </h2>
+
+              <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+                Stay up to date with the latest news, insights, and updates from Bayes Price.
+                Follow our company page for industry trends, product updates, and more.
+              </p>
+
+              {/* LinkedIn Page Plugin - Uncomment when ready to embed */}
+              {/*
+              <div className="mb-8">
+                <iframe
+                  src="https://www.linkedin.com/embed/feed/update/urn:li:company:bayesprice"
+                  height="600"
+                  width="100%"
+                  frameBorder="0"
+                  allowFullScreen
+                  title="Embedded LinkedIn post"
+                  className="rounded-lg"
+                />
+              </div>
+              */}
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" variant="coral" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+                  <a
+                    href="https://www.linkedin.com/company/bayes-price/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Linkedin className="mr-2 h-5 w-5" />
+                    Follow Bayes Price
+                  </a>
+                </Button>
+                <Button size="lg" variant="coral-outline" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+                  <a
+                    href="https://www.linkedin.com/company/bayes-price/posts/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View All Posts
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
             </div>
 
-            <Footer />
+            {/* Recent Highlights - Optional static section */}
+            <div className="mt-16">
+              <h3 className="text-xl font-heading font-semibold text-foreground mb-8 text-center">
+                Recent Highlights
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="p-6 bg-white rounded-xl border border-gray-200 hover:border-coral transition-colors">
+                  <div className="text-sm text-muted-foreground mb-2">Company News</div>
+                  <p className="text-foreground font-medium">
+                    MRS Technology & Innovation Award Winner
+                  </p>
+                </div>
+                <div className="p-6 bg-white rounded-xl border border-gray-200 hover:border-coral transition-colors">
+                  <div className="text-sm text-muted-foreground mb-2">Recognition</div>
+                  <p className="text-foreground font-medium">
+                    Insight250 Winner 2024
+                  </p>
+                </div>
+                <div className="p-6 bg-white rounded-xl border border-gray-200 hover:border-coral transition-colors">
+                  <div className="text-sm text-muted-foreground mb-2">Product Update</div>
+                  <p className="text-foreground font-medium">
+                    Platinum AI Platform Launch
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    );
-};
+      </section>
 
-export default News;
+      <Footer />
+    </div>
+  )
+}
+
+export default News
