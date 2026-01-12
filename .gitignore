@@ -31,3 +31,8 @@ dist-ssr
 
 # Brand assets (large files)
 *.pdf
+
+# Claude Code and session files
+.claude/
+thoughts/
+transcript.md
