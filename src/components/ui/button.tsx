@@ -17,6 +17,10 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         coral: "bg-coral text-white hover:bg-coral/90",
         "coral-outline": "border-2 border-coral text-coral bg-transparent hover:bg-coral hover:text-white",
+        blue: "bg-blue text-white hover:bg-blue/90",
+        red: "bg-red text-white hover:bg-red/90",
+        green: "bg-green text-white hover:bg-green/90",
+        yellow: "bg-yellow text-charcoal hover:bg-yellow/90",
         // New Premium Variants
         neon: "bg-white text-primary border-2 border-transparent hover:border-primary/20 shadow-neon-blue hover:shadow-neon-blue/80 text-foreground font-semibold",
         glass: "bg-glass-100 backdrop-blur-md border border-glass-200 text-foreground hover:bg-glass-200 shadow-glass",

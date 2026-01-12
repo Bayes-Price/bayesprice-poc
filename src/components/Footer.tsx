@@ -60,6 +60,27 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
+
+            <div>
+              <h4 className="text-sm font-medium text-charcoal mb-3">Legal</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/privacy-policy" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/terms-conditions" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Terms & Conditions
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/modern-slavery-policy" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Modern Slavery Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

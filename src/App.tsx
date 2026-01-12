@@ -15,6 +15,9 @@ import News from "./pages/News";
 import Contact from "./pages/Contact";
 import Works from "./pages/Works";
 import DiscoveryLanding from "./pages/DiscoveryLanding";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import ModernSlaveryPolicy from "./pages/ModernSlaveryPolicy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -38,6 +41,9 @@ const App = () => (
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/discovery" element={<DiscoveryLanding />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/modern-slavery-policy" element={<ModernSlaveryPolicy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

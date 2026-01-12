@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import InsightsAnimation from "@/components/InsightsAnimation";
-import RotatingTestimonials from "@/components/RotatingTestimonials";
+import TestimonialsSection from "@/components/TestimonialsSection";
 import { ArrowRight } from "lucide-react";
 import dashboardImage from "@/assets/image.png";
 import platinumLogo from "@/assets/Platinum/platinumblue3.png";
@@ -93,7 +93,7 @@ const Index = () => {
       <InsightsAnimation />
 
       {/* What We Do */}
-      <section className="py-24 md:py-32">
+      <section className="py-24 md:py-32 relative z-10 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
@@ -192,41 +192,7 @@ const Index = () => {
       </section>
 
       {/* More Testimonials */}
-      <section className="py-24 md:py-32 bg-charcoal">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white text-center mb-16">
-            What our clients say
-          </h2>
-
-          <RotatingTestimonials
-            testimonials={[
-              {
-                quote: "Bayes Price are a regular partner in providing quantitative research. They're quick, efficient, great at problem-solving.",
-                title: "Managing Director",
-                company: "OKO"
-              },
-              {
-                quote: "An excellent solution. The integrated approach should significantly reduce errors, turnaround time, and cost.",
-                title: "MRS/ASC Judges",
-                company: "Technology & Innovation Award"
-              },
-              {
-                // TODO: Replace with actual Fiona quote for services
-                quote: "Their services team consistently delivers exceptional quality and turnaround times.",
-                title: "Client Services",
-                company: "Bayes Price Services"
-              },
-              {
-                // TODO: Replace with actual Sky Ireland quote
-                quote: "Fantastic partnership that has transformed how we approach data insights.",
-                title: "Research Team",
-                company: "Sky Ireland"
-              }
-            ]}
-            interval={5000}
-          />
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* Features */}
       <section className="py-24 md:py-32">

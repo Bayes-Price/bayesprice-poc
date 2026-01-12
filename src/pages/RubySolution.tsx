@@ -1,8 +1,9 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, Layers, FileCode, Globe, Database, Server, Settings, MessageSquare } from "lucide-react";
+import { ArrowRight, Award, Layers, FileCode, Globe, Database, Server, Settings } from "lucide-react";
 import rubyDesktop from "@/assets/ruby-desktop.jpg";
+import rubyLogo from "@/assets/Ruby/rubyred3.png";
 
 const RubySolution = () => {
   return (
@@ -13,18 +14,19 @@ const RubySolution = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50/70 via-blue-50/30 to-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block border border-coral/20 bg-coral/5 px-4 py-2 rounded-full text-sm font-medium mb-6 text-coral">
+            <div className="inline-block border border-red/20 bg-red/5 px-4 py-2 rounded-full text-sm font-medium mb-6 text-red">
               Award-Winning Desktop Application
             </div>
-            <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
-              Ruby Survey Processing
+            <img src={rubyLogo} alt="Ruby" className="w-full max-w-md mx-auto mb-4" />
+            <h1 className="text-2xl md:text-3xl font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
+              Survey Processing
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Professional-grade desktop application combining intuitive GUI with powerful
               open-source batch scripting for comprehensive survey data management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="coral" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+              <Button size="lg" variant="red" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
                 <a href="/discovery">
                   Book a Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -50,7 +52,7 @@ const RubySolution = () => {
       <section className="py-12 bg-secondary/30 border-y border-gray-100">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-center md:text-left">
-            <div className="w-16 h-16 rounded-full bg-coral flex items-center justify-center flex-shrink-0">
+            <div className="w-16 h-16 rounded-full bg-red flex items-center justify-center flex-shrink-0">
               <Award className="text-white" size={32} />
             </div>
             <div>
@@ -74,11 +76,11 @@ const RubySolution = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Feature 1 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <Layers className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <Layers className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Interface</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Interface</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Dual Interface</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -89,11 +91,11 @@ const RubySolution = () => {
 
               {/* Feature 2 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <FileCode className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <FileCode className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Compatibility</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Compatibility</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Universal Support</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -104,11 +106,11 @@ const RubySolution = () => {
 
               {/* Feature 3 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <Settings className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <Settings className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Analysis</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Analysis</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Wave Management</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -119,11 +121,11 @@ const RubySolution = () => {
 
               {/* Feature 4 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <Globe className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <Globe className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Output</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Output</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Flexible Export</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -134,11 +136,11 @@ const RubySolution = () => {
 
               {/* Feature 5 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <Server className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <Server className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Infrastructure</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Infrastructure</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Deployment Flexibility</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -149,11 +151,11 @@ const RubySolution = () => {
 
               {/* Feature 6 */}
               <div className="group">
-                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors flex items-center justify-center">
-                  <Database className="text-coral/40 group-hover:text-coral transition-colors" size={64} />
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-50 to-blue-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-red transition-colors flex items-center justify-center">
+                  <Database className="text-red/40 group-hover:text-red transition-colors" size={64} />
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Automation</span>
+                  <span className="text-sm text-red uppercase tracking-wider font-medium">Automation</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Open-Source Scripting</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -166,67 +168,22 @@ const RubySolution = () => {
         </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-24 md:py-32 bg-secondary/30">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-heading font-normal text-foreground mb-16">
-              Who Uses Ruby?
-            </h2>
-
-            <div className="space-y-8">
-              {[
-                {
-                  title: "Market Research Agencies",
-                  desc: "Process hundreds of surveys monthly with consistent quality and formatting. Automate standard table production and wave-on-wave reporting for ongoing trackers."
-                },
-                {
-                  title: "Corporate Insight Teams",
-                  desc: "Maintain control of sensitive data with on-premises deployment while automating regular reporting for stakeholders across the organization."
-                },
-                {
-                  title: "Data Processing Specialists",
-                  desc: "Handle complex data transformations with batch scripting while maintaining quality through automated checks and validation routines."
-                },
-                {
-                  title: "Academic Researchers",
-                  desc: "Analyze survey data from multiple sources with professional-grade tools at an accessible price point for research budgets."
-                }
-              ].map((item, index) => (
-                <div key={index} className="group border-b border-gray-200 pb-8 last:border-0">
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <h3 className="text-2xl font-semibold text-foreground">{item.title}</h3>
-                    <div className="md:col-span-2">
-                      <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-24 md:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <MessageSquare className="mx-auto text-coral mb-6" size={48} />
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-normal text-foreground leading-tight mb-8">
-              Discuss Your Requirements
-            </h2>
-            <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
-              Speak with our team to learn how Ruby can transform your survey data processing workflow.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="coral" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
-                <a href="/discovery">
-                  Book a Consultation
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
-          </div>
+      <section className="py-24 md:py-32 bg-red">
+        <div className="container mx-auto px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
+            Discuss Your Requirements
+          </h2>
+          <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            Speak with our team to learn how Ruby can transform your survey data processing workflow.
+          </p>
+          <a
+            href="/discovery"
+            className="inline-flex items-center justify-center gap-2 bg-white text-red px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors"
+          >
+            Book a Consultation
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </section>
 

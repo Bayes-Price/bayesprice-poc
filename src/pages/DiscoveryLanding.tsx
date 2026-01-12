@@ -61,7 +61,7 @@ const DiscoveryLanding = () => {
                     <div className="max-w-3xl mx-auto text-center">
                         <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
                             Transform Your Data Into{" "}
-                            <span className="text-coral">Actionable Insights</span>
+                            <span className="text-yellow">Actionable Insights</span>
                         </h1>
                         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
                             Book a free discovery session to explore how our solutions can revolutionise your business intelligence. We'll listen, learn, and share knowledge.
@@ -69,7 +69,7 @@ const DiscoveryLanding = () => {
                         <Button
                             size="lg"
                             onClick={scrollToForm}
-                            className="bg-coral hover:bg-coral/90 text-white rounded-lg px-8 py-6 text-base font-medium transition-all"
+                            className="bg-yellow hover:bg-yellow/90 text-charcoal rounded-lg px-8 py-6 text-base font-medium transition-all"
                         >
                             Book Your Discovery Session
                             <ArrowRight className="ml-2 h-5 w-5" />
@@ -84,7 +84,7 @@ const DiscoveryLanding = () => {
                     <div className="max-w-5xl mx-auto">
                         <div className="text-center mb-12">
                             <h2 className="text-3xl md:text-4xl font-heading font-semibold text-foreground mb-6">
-                                Why <span className="text-coral">Bayes Price</span>?
+                                Why <span className="text-blue">Bayes Price</span>?
                             </h2>
                             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
                                 We combine deep research expertise with cutting-edge AI technology to deliver
@@ -95,8 +95,8 @@ const DiscoveryLanding = () => {
                         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center">
-                                        <CheckCircle2 className="h-6 w-6 text-coral" />
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-yellow/10 flex items-center justify-center">
+                                        <CheckCircle2 className="h-6 w-6 text-yellow" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-medium text-foreground mb-2">Human Insights. AI-Powered.</h3>
@@ -108,8 +108,8 @@ const DiscoveryLanding = () => {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center">
-                                        <CheckCircle2 className="h-6 w-6 text-coral" />
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue/10 flex items-center justify-center">
+                                        <CheckCircle2 className="h-6 w-6 text-blue" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-medium text-foreground mb-2">Transform Weeks Into Minutes</h3>
@@ -123,8 +123,8 @@ const DiscoveryLanding = () => {
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center">
-                                        <CheckCircle2 className="h-6 w-6 text-coral" />
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-red/10 flex items-center justify-center">
+                                        <CheckCircle2 className="h-6 w-6 text-red" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-medium text-foreground mb-2">Expert Human Insight</h3>
@@ -136,8 +136,8 @@ const DiscoveryLanding = () => {
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center">
-                                        <CheckCircle2 className="h-6 w-6 text-coral" />
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-green/10 flex items-center justify-center">
+                                        <CheckCircle2 className="h-6 w-6 text-green" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-medium text-foreground mb-2">Award-Winning Solutions</h3>
@@ -171,7 +171,7 @@ const DiscoveryLanding = () => {
                             {/* First Quote */}
                             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all">
                                 <div className="mb-6">
-                                    <svg className="h-10 w-10 text-coral/60" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="h-10 w-10 text-yellow/60" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                                     </svg>
                                 </div>
@@ -186,7 +186,7 @@ const DiscoveryLanding = () => {
                             {/* Second Quote */}
                             <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition-all">
                                 <div className="mb-6">
-                                    <svg className="h-10 w-10 text-coral/60" fill="currentColor" viewBox="0 0 24 24">
+                                    <svg className="h-10 w-10 text-yellow/60" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                                     </svg>
                                 </div>
@@ -216,11 +216,11 @@ const DiscoveryLanding = () => {
 
                     <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                         {/* Platinum Solution */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-coral/30 transition-all group">
+                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue/30 transition-all group">
                             <div className="mb-6">
-                                <Sparkles className="h-12 w-12 text-coral" />
+                                <Sparkles className="h-12 w-12 text-blue" />
                             </div>
-                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-coral transition-colors">
+                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-blue transition-colors">
                                 Platinum
                             </h3>
                             <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -228,26 +228,26 @@ const DiscoveryLanding = () => {
                             </p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue flex-shrink-0 mt-0.5" />
                                     <span>Automated data processing</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue flex-shrink-0 mt-0.5" />
                                     <span>Interactive dashboards</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-blue flex-shrink-0 mt-0.5" />
                                     <span>AI-powered insights</span>
                                 </li>
                             </ul>
                         </div>
 
                         {/* Ruby Solution */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-coral/30 transition-all group">
+                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-red/30 transition-all group">
                             <div className="mb-6">
-                                <Database className="h-12 w-12 text-coral" />
+                                <Database className="h-12 w-12 text-red" />
                             </div>
-                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-coral transition-colors">
+                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-red transition-colors">
                                 Ruby
                             </h3>
                             <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -255,26 +255,26 @@ const DiscoveryLanding = () => {
                             </p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-red flex-shrink-0 mt-0.5" />
                                     <span>Survey processing</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-red flex-shrink-0 mt-0.5" />
                                     <span>Batch scripting</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-red flex-shrink-0 mt-0.5" />
                                     <span>Data validation</span>
                                 </li>
                             </ul>
                         </div>
 
                         {/* Professional Services */}
-                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-coral/30 transition-all group">
+                        <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-green/30 transition-all group">
                             <div className="mb-6">
-                                <Users className="h-12 w-12 text-coral" />
+                                <Users className="h-12 w-12 text-green" />
                             </div>
-                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-coral transition-colors">
+                            <h3 className="text-2xl font-medium text-foreground mb-4 group-hover:text-green transition-colors">
                                 Services
                             </h3>
                             <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -282,15 +282,15 @@ const DiscoveryLanding = () => {
                             </p>
                             <ul className="space-y-3 mb-6">
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-green flex-shrink-0 mt-0.5" />
                                     <span>Data consulting</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-green flex-shrink-0 mt-0.5" />
                                     <span>Custom development</span>
                                 </li>
                                 <li className="flex items-start gap-2 text-foreground">
-                                    <CheckCircle2 className="h-5 w-5 text-coral flex-shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="h-5 w-5 text-green flex-shrink-0 mt-0.5" />
                                     <span>Training & support</span>
                                 </li>
                             </ul>
@@ -322,7 +322,7 @@ const DiscoveryLanding = () => {
                                     required
                                     value={formData.name}
                                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-coral focus-visible:ring-coral"
+                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-blue focus-visible:ring-blue"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -337,7 +337,7 @@ const DiscoveryLanding = () => {
                                     required
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-coral focus-visible:ring-coral"
+                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-blue focus-visible:ring-blue"
                                     placeholder="john@company.com"
                                 />
                             </div>
@@ -350,7 +350,7 @@ const DiscoveryLanding = () => {
                                     id="company"
                                     value={formData.company}
                                     onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-coral focus-visible:ring-coral"
+                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-blue focus-visible:ring-blue"
                                     placeholder="Your Company"
                                 />
                             </div>
@@ -363,7 +363,7 @@ const DiscoveryLanding = () => {
                                     id="message"
                                     value={formData.message}
                                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-coral focus-visible:ring-coral min-h-32 resize-none"
+                                    className="bg-white border-gray-300 text-foreground placeholder:text-muted-foreground focus-visible:border-blue focus-visible:ring-blue min-h-32 resize-none"
                                     placeholder="What challenges are you facing? What are you looking to achieve?"
                                 />
                             </div>
@@ -371,7 +371,7 @@ const DiscoveryLanding = () => {
                             <Button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-coral hover:bg-coral/90 text-white rounded-lg py-6 text-lg font-medium transition-all"
+                                className="w-full bg-yellow hover:bg-yellow/90 text-charcoal rounded-lg py-6 text-lg font-medium transition-all"
                             >
                                 {isSubmitting ? "Submitting..." : "Request Discovery Session"}
                             </Button>

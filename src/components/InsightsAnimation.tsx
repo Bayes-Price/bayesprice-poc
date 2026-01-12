@@ -37,6 +37,7 @@ const InsightsAnimation = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const [canvasSize, setCanvasSizeState] = useState({ width: 0, height: 0 });
+  const [titleOpacity, setTitleOpacity] = useState(1);
   const clustersRef = useRef<Cluster[]>([]);
   const progressRef = useRef(0);
 
@@ -339,6 +340,8 @@ const InsightsAnimation = () => {
       ease: "none",
       onUpdate: () => {
         progressRef.current = progress.value;
+        // Fade out title quickly at start
+        setTitleOpacity(Math.max(0, 1 - progress.value * 4));
         // Show cards one by one based on progress
         const newVisible: number[] = [];
         if (progress.value > 0.75) newVisible.push(0);
@@ -367,25 +370,38 @@ const InsightsAnimation = () => {
   const cardColors = ["#FFC000", "#00B2FF", "#FF544F"]; // Yellow, Blue, Red
 
   return (
-    <section ref={containerRef} className="relative h-screen bg-gray-50">
-      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
+    <section ref={containerRef} className="relative h-screen bg-gray-50 z-0 overflow-hidden isolate">
+      {/* Title - visible at start, fades as animation progresses */}
+      <div
+        className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center pointer-events-none z-10 transition-opacity duration-150"
+        style={{ opacity: titleOpacity }}
+      >
+        <h2 className="text-4xl md:text-5xl font-heading font-bold text-charcoal/20">
+          Data → Action
+        </h2>
+      </div>
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full z-0" />
 
       {/* Profile cards that appear on scroll */}
       {clusters.map((cluster, index) => {
         const isVisible = visibleCards.includes(index);
         const cardX = cluster.x * canvasSize.width;
-        const cardY = cluster.y * canvasSize.height + cluster.radius + 50;
+        // Red card (index 2) appears above the circle, others appear below
+        const isAbove = index === 2;
+        const cardY = isAbove
+          ? cluster.y * canvasSize.height - cluster.radius - 220
+          : cluster.y * canvasSize.height + cluster.radius + 50;
 
         return (
           <div
             key={index}
             className={`absolute z-20 transition-all duration-500 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+              isVisible ? "opacity-100 translate-y-0" : `opacity-0 ${isAbove ? "-translate-y-4" : "translate-y-4"}`
             }`}
             style={{
               left: cardX,
               top: cardY,
-              transform: `translateX(-50%) ${isVisible ? "translateY(0)" : "translateY(16px)"}`,
+              transform: `translateX(-50%) ${isVisible ? "translateY(0)" : isAbove ? "translateY(-16px)" : "translateY(16px)"}`,
             }}
           >
             <div
