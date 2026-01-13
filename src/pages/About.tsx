@@ -123,7 +123,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mb-16 text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4 text-foreground">
-              Our Team
+              Our Top Team
             </h2>
             <div className="h-1 w-20 bg-green mx-auto"></div>
           </div>
@@ -263,6 +263,34 @@ const About = () => {
                 </div>
               </div>
             </div>
+
+                        {/* Alpesh Patel */}
+            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-green transition-all hover:shadow-lg">
+              <div className="p-8 space-y-4">
+                <div className="flex items-start justify-between">
+                  <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
+                    AG
+                  </div>
+                  <a
+                    href="https://www.linkedin.com/in/paa-600b2b347/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-green transition-colors"
+                    aria-label="Alpesh's LinkedIn"
+                  >
+                    <Linkedin size={18} />
+                  </a>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-1 text-foreground">Alpesh Patel</h3>
+                  <p className="text-green font-medium text-xs mb-3">Service Management</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Project management & advanced programming
+                  </p>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
