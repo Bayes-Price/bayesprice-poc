@@ -42,6 +42,11 @@ const Footer = () => {
                     Ruby
                   </Link>
                 </li>
+                <li>
+                  <Link to="/solutions/services" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Services
+                  </Link>
+                </li>
               </ul>
             </div>
 

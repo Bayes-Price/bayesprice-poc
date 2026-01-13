@@ -37,6 +37,9 @@ const Navigation = () => {
           <Link to="/solutions/ruby" className="text-sm text-charcoal/70 hover:text-charcoal transition-colors">
             Ruby
           </Link>
+          <Link to="/solutions/services" className="text-sm text-charcoal/70 hover:text-charcoal transition-colors">
+            Services
+          </Link>
           <Link to="/about" className="text-sm text-charcoal/70 hover:text-charcoal transition-colors">
             About
           </Link>
@@ -74,6 +77,13 @@ const Navigation = () => {
               onClick={() => setIsOpen(false)}
             >
               Ruby
+            </Link>
+            <Link
+              to="/solutions/services"
+              className="text-charcoal/70 hover:text-charcoal"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
             </Link>
             <Link
               to="/about"
