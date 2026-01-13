@@ -18,6 +18,8 @@ import DiscoveryLanding from "./pages/DiscoveryLanding";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import ModernSlaveryPolicy from "./pages/ModernSlaveryPolicy";
+import EULA from "./pages/EULA";
+import ServiceTerms from "./pages/ServiceTerms";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -44,6 +46,8 @@ const App = () => (
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
           <Route path="/modern-slavery-policy" element={<ModernSlaveryPolicy />} />
+          <Route path="/eula" element={<EULA />} />
+          <Route path="/serviceterms" element={<ServiceTerms />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import pool from '../db/connection.js';
 import { DiscoverySubmissionSchema, type DiscoverySubmissionRecord } from '../types/submission.js';
 import { sendDiscoveryNotification, sendConfirmationEmail } from '../services/email.js';
+import { createDiscoveryIssue } from '../services/github.js';
 
 const router = Router();
 
@@ -59,6 +60,11 @@ router.post('/submit', async (req: Request, res: Response): Promise<void> => {
         // Send confirmation to user
         sendConfirmationEmail(emailData).catch(err => {
             console.error('Failed to send confirmation email:', err);
+        });
+
+        // Create GitHub issue for tracking
+        createDiscoveryIssue(emailData).catch(err => {
+            console.error('Failed to create GitHub issue:', err);
         });
 
         res.status(201).json({

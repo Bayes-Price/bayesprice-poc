@@ -327,7 +327,7 @@ const InsightsAnimation = () => {
       scrollTrigger: {
         trigger: container,
         start: "top top",
-        end: "+=100%", // Pin for one full viewport height of scrolling
+        end: "+=120%", // Pin for 120% viewport height - extra 20% for pause at end
         pin: true,
         scrub: 0.75,
         anticipatePin: 1,
@@ -336,7 +336,7 @@ const InsightsAnimation = () => {
 
     tl.to(progress, {
       value: 1,
-      duration: 1,
+      duration: 0.85, // Complete animation at 85% of scroll, leaving 15% pause at end
       ease: "none",
       onUpdate: () => {
         progressRef.current = progress.value;

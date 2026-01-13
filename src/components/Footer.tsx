@@ -19,6 +19,17 @@ const Footer = () => {
           {/* Links */}
           <div className="flex flex-wrap gap-12">
             <div>
+              <h4 className="text-sm font-medium text-charcoal mb-3">Get Started</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link to="/discovery" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Book a Demo
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
               <h4 className="text-sm font-medium text-charcoal mb-3">Solutions</h4>
               <ul className="space-y-2">
                 <li>
@@ -51,17 +62,6 @@ const Footer = () => {
             </div>
 
             <div>
-              <h4 className="text-sm font-medium text-charcoal mb-3">Get Started</h4>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/discovery" className="text-sm text-charcoal/60 hover:text-charcoal">
-                    Book a Demo
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
               <h4 className="text-sm font-medium text-charcoal mb-3">Legal</h4>
               <ul className="space-y-2">
                 <li>
@@ -77,6 +77,16 @@ const Footer = () => {
                 <li>
                   <Link to="/modern-slavery-policy" className="text-sm text-charcoal/60 hover:text-charcoal">
                     Modern Slavery Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/eula" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    EULA
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/serviceterms" className="text-sm text-charcoal/60 hover:text-charcoal">
+                    Service Terms
                   </Link>
                 </li>
               </ul>

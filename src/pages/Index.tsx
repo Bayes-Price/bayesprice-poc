@@ -89,8 +89,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Data to Insights Animation */}
-      <InsightsAnimation />
+      {/* Data to Insights Animation - hidden on mobile */}
+      <div className="hidden md:block">
+        <InsightsAnimation />
+      </div>
 
       {/* What We Do */}
       <section className="py-24 md:py-32 relative z-10 bg-white">
@@ -193,52 +195,6 @@ const Index = () => {
 
       {/* More Testimonials */}
       <TestimonialsSection />
-
-      {/* Features */}
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-6">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-4">
-              Built for research teams
-            </h2>
-            <p className="text-charcoal/60">
-              Everything you need to process, analyze, and visualize survey data.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-blue/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-blue font-bold">1</span>
-              </div>
-              <h3 className="font-bold text-charcoal mb-2">Data Processing</h3>
-              <p className="text-sm text-charcoal/60">
-                Automated cleaning, weighting, and validation of survey data.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-12 h-12 bg-green/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-green font-bold">2</span>
-              </div>
-              <h3 className="font-bold text-charcoal mb-2">Analysis</h3>
-              <p className="text-sm text-charcoal/60">
-                Powerful statistical analysis with AI-powered insights.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-12 h-12 bg-pink/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-pink font-bold">3</span>
-              </div>
-              <h3 className="font-bold text-charcoal mb-2">Visualization</h3>
-              <p className="text-sm text-charcoal/60">
-                Beautiful charts and dashboards that tell your story.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="py-24 md:py-32 bg-yellow">

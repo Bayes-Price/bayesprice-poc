@@ -14,6 +14,14 @@ export interface EmailData {
   submittedAt: string;
 }
 
+export interface ContactEmailData {
+  name: string;
+  email: string;
+  service?: string;
+  message: string;
+  submittedAt: string;
+}
+
 export async function sendDiscoveryNotification(data: EmailData): Promise<void> {
   if (!resend) {
     console.warn('⚠️ RESEND_API_KEY not set - skipping email notification');
@@ -252,5 +260,243 @@ export async function sendConfirmationEmail(data: EmailData): Promise<void> {
     console.log(`✅ Confirmation email sent to ${data.email}`);
   } catch (error) {
     console.error('❌ Error sending confirmation email:', error);
+  }
+}
+
+export async function sendContactNotification(data: ContactEmailData): Promise<void> {
+  if (!resend) {
+    console.warn('⚠️ RESEND_API_KEY not set - skipping contact notification');
+    return;
+  }
+
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+  const toEmail = process.env.RESEND_TO_EMAIL || 'info@bayesprice.com';
+
+  try {
+    console.log(`📧 Attempting to send contact notification from ${fromEmail} to ${toEmail}`);
+    const { data: emailData, error } = await resend.emails.send({
+      from: fromEmail,
+      to: toEmail,
+      subject: '📬 New Contact Form Message',
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .content {
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 0 0 8px 8px;
+    }
+    .field {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: 600;
+      color: #c2410c;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .value {
+      background: white;
+      padding: 12px;
+      border-radius: 4px;
+      border-left: 3px solid #f97316;
+    }
+    .message-box {
+      background: white;
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 3px solid #f97316;
+      white-space: pre-wrap;
+      min-height: 60px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    .cta-button {
+      display: inline-block;
+      background: #f97316;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>📬 New Contact Form Message</h1>
+  </div>
+
+  <div class="content">
+    <div class="field">
+      <span class="label">Name</span>
+      <div class="value">${data.name}</div>
+    </div>
+
+    <div class="field">
+      <span class="label">Email</span>
+      <div class="value">
+        <a href="mailto:${data.email}" style="color: #c2410c; text-decoration: none;">
+          ${data.email}
+        </a>
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="label">Service Interest</span>
+      <div class="value">${data.service || 'Not specified'}</div>
+    </div>
+
+    <div class="field">
+      <span class="label">Message</span>
+      <div class="message-box">${data.message || 'No message provided'}</div>
+    </div>
+
+    <div class="field">
+      <span class="label">Submitted</span>
+      <div class="value">${data.submittedAt}</div>
+    </div>
+
+    <div style="text-align: center;">
+      <a href="mailto:${data.email}" class="cta-button">Reply to ${data.name}</a>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>This is an automated notification from the Bayes Price website.</p>
+  </div>
+</body>
+</html>
+      `
+    });
+
+    if (error) {
+      console.error('❌ Error sending contact notification via Resend:', error);
+      throw error;
+    }
+
+    console.log(`✅ Contact notification sent to ${toEmail}`, emailData ? `(ID: ${emailData.id})` : '');
+  } catch (error) {
+    console.error('❌ Error sending contact notification:', error);
+    throw error;
+  }
+}
+
+export async function sendContactConfirmationEmail(data: ContactEmailData): Promise<void> {
+  if (!resend) {
+    console.warn('⚠️ RESEND_API_KEY not set - skipping contact confirmation email');
+    return;
+  }
+
+  const fromEmail = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
+
+  try {
+    const { error } = await resend.emails.send({
+      from: fromEmail,
+      to: data.email,
+      subject: 'Thank you for contacting Bayes Price',
+      html: `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+      color: white;
+      padding: 30px;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+    }
+    .content {
+      background: #f9fafb;
+      padding: 30px;
+      border-radius: 0 0 8px 8px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Thank You!</h1>
+  </div>
+
+  <div class="content">
+    <p>Hi ${data.name},</p>
+
+    <p>Thank you for getting in touch with <strong>Bayes Price</strong>!</p>
+
+    <p>We've received your message and will respond within <strong>24 hours</strong>.</p>
+
+    <p>In the meantime, feel free to explore our solutions:</p>
+    <ul>
+      <li><strong>Platinum:</strong> AI-driven automated analysis</li>
+      <li><strong>Ruby:</strong> Award-winning survey data processing</li>
+      <li><strong>Services:</strong> Expert consulting and support</li>
+    </ul>
+
+    <p>Best regards,<br>The Bayes Price Team</p>
+  </div>
+
+  <div class="footer">
+    <p><strong>Bayes Price</strong><br>
+    Transform Data into Action<br>
+    <a href="https://www.bayesprice.com" style="color: #f97316;">www.bayesprice.com</a></p>
+  </div>
+</body>
+</html>
+      `
+    });
+
+    if (error) {
+      console.error('❌ Error sending contact confirmation email via Resend:', error);
+      return;
+    }
+
+    console.log(`✅ Contact confirmation email sent to ${data.email}`);
+  } catch (error) {
+    console.error('❌ Error sending contact confirmation email:', error);
   }
 }

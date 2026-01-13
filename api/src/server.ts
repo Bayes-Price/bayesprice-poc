@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import discoveryRoutes from './routes/discovery.js';
+import contactRoutes from './routes/contact.js';
 
 dotenv.config();
 
@@ -25,6 +26,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/discovery', discoveryRoutes);
+app.use('/api/contact', contactRoutes);
 
 // Root endpoint
 app.get('/', (req, res) => {
