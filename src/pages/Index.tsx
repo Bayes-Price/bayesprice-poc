@@ -24,7 +24,7 @@ const Index = () => {
               <span className="text-yellow">clarity and action</span>
             </h1>
             <p className="text-lg md:text-xl text-charcoal/60 mb-8 max-w-2xl mx-auto">
-              Advanced data integration for decision-makers who need to navigate
+              Advanced solutions for decision-makers who need to navigate
               data effectively. From raw data to actionable insights.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -60,7 +60,7 @@ const Index = () => {
       {/* Trusted By */}
       <section className="pt-12 pb-12 border-y border-gray-100 relative z-10 bg-white">
         <div className="container mx-auto px-6">
-          <p className="text-sm text-charcoal/40 text-center mb-8">Trusted by leading research teams</p>
+          <p className="text-sm text-charcoal/40 text-center mb-8">Trusted by leading teams</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {/* Client Logos */}
             <img
