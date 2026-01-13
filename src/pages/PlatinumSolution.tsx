@@ -33,7 +33,7 @@ const PlatinumSolution = () => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Ground-breaking speed to insight. Transform weeks of analysis into minutes
-              with our award-winning AI-driven business intelligence platform.
+              with our AI-enhanced business intelligence platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="blue" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
@@ -129,8 +129,7 @@ const PlatinumSolution = () => {
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">AI-Driven Insights</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Advanced machine learning algorithms automatically analyze patterns,
-                  trends, and anomalies with unprecedented accuracy.
+                  Advanced models understand your data, automate manual processes, and provide transparent insights, tracable to source.
                 </p>
               </div>
 
@@ -142,12 +141,11 @@ const PlatinumSolution = () => {
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-blue uppercase tracking-wider font-medium">Visualization</span>
+                  <span className="text-sm text-blue uppercase tracking-wider font-medium">Customisable</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3">Automated Charts</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Your Culture</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Generate stunning, interactive charts and graphs automatically.
-                  Customize and export with a single click.
+                  Tailor our sophisticated AI-enhanced insights toolkit, to your corporate culture, to understand your projects, and respect your methodologies.
                 </p>
               </div>
 
@@ -161,10 +159,9 @@ const PlatinumSolution = () => {
                 <div className="mb-3">
                   <span className="text-sm text-blue uppercase tracking-wider font-medium">Reporting</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3">PowerPoint Generation</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Advanced Tabulation<</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
-                  Automatically create professional presentation decks with insights,
-                  visualizations, and recommendations ready to share.
+                  Generate complex data tables with filters, weighting, side and top nesting.  Significance tests as standard.
                 </p>
               </div>
 
