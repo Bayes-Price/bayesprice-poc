@@ -82,7 +82,7 @@ const Index = () => {
           </div>
           {/* Industry Bodies */}
           <div className="flex flex-wrap justify-center items-center gap-8 mt-6 pt-6 border-t border-gray-100">
-            <p className="text-xs text-charcoal/40 mr-4">Industry accreditations:</p>
+            <p className="text-xs text-charcoal/40 mr-4">Industry associations:</p>
             <span className="text-charcoal/50 font-medium">MRS</span>
             <span className="text-charcoal/50 font-medium">TSAPI</span>
           </div>
