@@ -36,7 +36,7 @@ const PlatinumSolution = () => {
               with our AI-enhanced business intelligence platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="blue" className="rounded-lg px-8 py-6 text-base font-medium" asChild>
+              <Button size="lg" variant="blue" className="rounded-full px-8 py-6 text-base font-medium" asChild>
                 <a href="/discovery">
                   Book a Demo
                   <ArrowRight className="ml-2 h-4 w-4" />

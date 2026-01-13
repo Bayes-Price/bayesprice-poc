@@ -15,7 +15,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
-              Our <span className="text-green">Story</span>
+              Our <span className="text-yellow">Story</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
               Our company was formed out of a desire to do things as they should be. We fuse traditional
@@ -31,7 +31,7 @@ const About = () => {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-heading font-semibold tracking-tight text-foreground mb-8">
-              Our Vision
+              Our <span className="text-blue">Vision</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               We envision a world where insights are instantaneous and actionable, empowering every
@@ -48,12 +48,12 @@ const About = () => {
             <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4 text-foreground">
               Founders
             </h2>
-            <div className="h-1 w-20 bg-green mx-auto"></div>
+            <div className="h-1 w-20 bg-red mx-auto"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
             {/* Matt Gibbs */}
-            <div className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-yellow-50 to-white border border-border hover:border-yellow transition-all hover:shadow-lg">
               <div className="p-10 space-y-6">
                 <img
                   src={mattGibbsPhoto}
@@ -62,7 +62,7 @@ const About = () => {
                 />
                 <div>
                   <h3 className="text-2xl font-semibold mb-2 text-foreground">Matt Gibbs</h3>
-                  <p className="text-green font-medium text-sm mb-2">Co-Founder & CEO</p>
+                  <p className="text-yellow font-medium text-sm mb-2">Co-Founder & CEO</p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Matt, recognised as one of the Insight250 winners in 2024, is a leader in merging
                     established theory with modern techniques, championing innovation and collaboration.
@@ -75,7 +75,7 @@ const About = () => {
                     href="https://www.linkedin.com/in/mattgibbs/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green hover:text-green/80 transition-colors text-sm font-medium"
+                    className="inline-flex items-center gap-2 text-yellow hover:text-yellow/80 transition-colors text-sm font-medium"
                   >
                     <Linkedin size={16} />
                     Connect on LinkedIn
@@ -85,7 +85,7 @@ const About = () => {
             </div>
 
             {/* Nikki Leftly */}
-            <div className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-gradient-to-br from-blue-50 to-white border border-border hover:border-blue transition-all hover:shadow-lg">
               <div className="p-10 space-y-6">
                 <img
                   src={nikkiLeftlyPhoto}
@@ -94,7 +94,7 @@ const About = () => {
                 />
                 <div>
                   <h3 className="text-2xl font-semibold mb-2 text-foreground">Nikki Leftly</h3>
-                  <p className="text-green font-medium text-sm mb-2">Co-Founder & COO</p>
+                  <p className="text-blue font-medium text-sm mb-2">Co-Founder & COO</p>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     Nikki has over 25 years' experience in both the Market and Social Research industries,
                     completing 10,000+ projects over the course of her career. She has built-up and led a
@@ -106,7 +106,7 @@ const About = () => {
                     href="https://www.linkedin.com/in/nikkileftly/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-green hover:text-green/80 transition-colors text-sm font-medium"
+                    className="inline-flex items-center gap-2 text-blue hover:text-blue/80 transition-colors text-sm font-medium"
                   >
                     <Linkedin size={16} />
                     Connect on LinkedIn
@@ -130,17 +130,17 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Roland Seidel */}
-            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-red transition-all hover:shadow-lg">
               <div className="p-8 space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
+                  <div className="w-16 h-16 rounded-full bg-red/10 flex items-center justify-center text-red text-lg font-bold">
                     RS
                   </div>
                   <a
                     href="https://www.linkedin.com/in/rolandseidel/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-green transition-colors"
+                    className="text-muted-foreground hover:text-red transition-colors"
                     aria-label="Roland's LinkedIn"
                   >
                     <Linkedin size={18} />
@@ -148,7 +148,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1 text-foreground">Roland Seidel</h3>
-                  <p className="text-green font-medium text-xs mb-3">Software Lead</p>
+                  <p className="text-red font-medium text-xs mb-3">Software Lead</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Leads research data processing software
                   </p>
@@ -157,17 +157,17 @@ const About = () => {
             </div>
 
             {/* Dale Chant */}
-            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-blue transition-all hover:shadow-lg">
               <div className="p-8 space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
+                  <div className="w-16 h-16 rounded-full bg-blue/10 flex items-center justify-center text-blue text-lg font-bold">
                     DC
                   </div>
                   <a
                     href="https://www.linkedin.com/in/dalechant/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-green transition-colors"
+                    className="text-muted-foreground hover:text-blue transition-colors"
                     aria-label="Dale's LinkedIn"
                   >
                     <Linkedin size={18} />
@@ -175,7 +175,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1 text-foreground">Dale Chant</h3>
-                  <p className="text-green font-medium text-xs mb-3">Operations Specialist</p>
+                  <p className="text-blue font-medium text-xs mb-3">Operations Specialist</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Specialising in continuous tracking operations
                   </p>
@@ -184,17 +184,17 @@ const About = () => {
             </div>
 
             {/* Kai Davenport */}
-            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-yellow transition-all hover:shadow-lg">
               <div className="p-8 space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
+                  <div className="w-16 h-16 rounded-full bg-yellow/10 flex items-center justify-center text-yellow text-lg font-bold">
                     KD
                   </div>
                   <a
                     href="https://www.linkedin.com/in/kaidavenport/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-green transition-colors"
+                    className="text-muted-foreground hover:text-yellow transition-colors"
                     aria-label="Kai's LinkedIn"
                   >
                     <Linkedin size={18} />
@@ -202,7 +202,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1 text-foreground">Kai Davenport</h3>
-                  <p className="text-green font-medium text-xs mb-3">Software Architect</p>
+                  <p className="text-yellow font-medium text-xs mb-3">Software Architect</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Software architect & GenAI
                   </p>
@@ -238,17 +238,17 @@ const About = () => {
             </div>
 
             {/* Amy Graveson */}
-            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="group relative overflow-hidden rounded-lg bg-white border border-border hover:border-red transition-all hover:shadow-lg">
               <div className="p-8 space-y-4">
                 <div className="flex items-start justify-between">
-                  <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
+                  <div className="w-16 h-16 rounded-full bg-red/10 flex items-center justify-center text-red text-lg font-bold">
                     AG
                   </div>
                   <a
                     href="https://www.linkedin.com/in/amygraveson/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-green transition-colors"
+                    className="text-muted-foreground hover:text-red transition-colors"
                     aria-label="Amy's LinkedIn"
                   >
                     <Linkedin size={18} />
@@ -256,7 +256,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold mb-1 text-foreground">Amy Graveson</h3>
-                  <p className="text-green font-medium text-xs mb-3">General Manager</p>
+                  <p className="text-red font-medium text-xs mb-3">General Manager</p>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     Legal, Administration, & General Management
                   </p>
@@ -299,8 +299,8 @@ const About = () => {
       <section className="py-24 md:py-32 bg-gradient-to-b from-blue-50/50 to-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center mx-auto mb-6">
-              <Award className="text-green" size={32} />
+            <div className="w-16 h-16 rounded-full bg-yellow/10 flex items-center justify-center mx-auto mb-6">
+              <Award className="text-yellow" size={32} />
             </div>
             <h2 className="text-3xl md:text-4xl font-heading font-semibold mb-4 text-foreground">
               Awards & Recognition
@@ -308,7 +308,7 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-10 rounded-lg border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="bg-white p-10 rounded-lg border border-border hover:border-blue transition-all hover:shadow-lg">
               <h3 className="text-2xl font-semibold mb-4 text-foreground">
                 MRS Technology & Innovation Award
               </h3>
@@ -318,7 +318,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-lg border border-border hover:border-green transition-all hover:shadow-lg">
+            <div className="bg-white p-10 rounded-lg border border-border hover:border-yellow transition-all hover:shadow-lg">
               <h3 className="text-2xl font-semibold mb-4 text-foreground">
                 Insight250 Winner 2024
               </h3>

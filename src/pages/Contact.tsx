@@ -78,14 +78,14 @@ const Contact = () => {
 
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <Mail className="w-5 h-5 text-coral" />
+                    <div className="w-12 h-12 rounded-full bg-yellow/10 flex items-center justify-center flex-shrink-0">
+                      <Mail className="w-5 h-5 text-yellow" />
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-charcoal uppercase tracking-wider mb-2">Email</h3>
                       <a
                         href="mailto:info@bayesprice.com"
-                        className="text-xl font-normal text-foreground hover:text-coral transition-colors"
+                        className="text-xl font-normal text-foreground hover:text-yellow transition-colors"
                       >
                         info@bayesprice.com
                       </a>
@@ -93,14 +93,14 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-5 h-5 text-coral" />
+                    <div className="w-12 h-12 rounded-full bg-blue/10 flex items-center justify-center flex-shrink-0">
+                      <Phone className="w-5 h-5 text-blue" />
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-charcoal uppercase tracking-wider mb-2">Phone</h3>
                       <a
                         href="tel:01172510523"
-                        className="text-xl font-normal text-foreground hover:text-coral transition-colors"
+                        className="text-xl font-normal text-foreground hover:text-blue transition-colors"
                       >
                         0117 251 0523
                       </a>
@@ -108,8 +108,8 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <MapPin className="w-5 h-5 text-coral" />
+                    <div className="w-12 h-12 rounded-full bg-red/10 flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-5 h-5 text-red" />
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-charcoal uppercase tracking-wider mb-2">Office</h3>
@@ -121,8 +121,8 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-full bg-coral/10 flex items-center justify-center flex-shrink-0">
-                      <Linkedin className="w-5 h-5 text-coral" />
+                    <div className="w-12 h-12 rounded-full bg-green/10 flex items-center justify-center flex-shrink-0">
+                      <Linkedin className="w-5 h-5 text-green" />
                     </div>
                     <div>
                       <h3 className="text-sm font-medium text-charcoal uppercase tracking-wider mb-2">Socials</h3>
@@ -131,7 +131,7 @@ const Contact = () => {
                           href="https://www.linkedin.com/company/bayesprice"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-base text-foreground hover:text-coral transition-colors flex items-center gap-2"
+                          className="text-base text-foreground hover:text-green transition-colors flex items-center gap-2"
                         >
                           LinkedIn
                         </a>

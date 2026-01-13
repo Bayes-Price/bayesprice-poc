@@ -12,7 +12,7 @@ const Services = () => {
       <section className="pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-blue-50/70 via-blue-50/30 to-white">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-block border border-coral/20 bg-coral/5 px-4 py-2 rounded-full text-sm font-medium mb-6 text-coral">
+            <div className="inline-block border border-green/20 bg-green/5 px-4 py-2 rounded-full text-sm font-medium mb-6 text-green">
               Professional Services
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground leading-[1.1] tracking-tight mb-6">
@@ -23,7 +23,7 @@ const Services = () => {
               expertise with deep knowledge of the insight profession, to ensure your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-coral hover:bg-coral/90 text-white rounded-lg px-8 py-6 text-base font-medium" asChild>
+              <Button size="lg" className="bg-green hover:bg-green/90 text-white rounded-full px-8 py-6 text-base font-medium" asChild>
                 <a href="/discovery">
                   Schedule Consultation
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -45,13 +45,13 @@ const Services = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Service 1 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Briefcase className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <Briefcase className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Integration</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Integration</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Data Connection</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -62,13 +62,13 @@ const Services = () => {
 
               {/* Service 2 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Bot className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <Bot className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Analysis</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Analysis</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">AI-Enhanced Analysis</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -79,13 +79,13 @@ const Services = () => {
 
               {/* Service 3 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Cog className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <Cog className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Automation</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Automation</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Automation Services</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -96,13 +96,13 @@ const Services = () => {
 
               {/* Service 4 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <FileText className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <FileText className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Reporting</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Reporting</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Custom Reporting</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -113,13 +113,13 @@ const Services = () => {
 
               {/* Service 5 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <ShieldCheck className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <ShieldCheck className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Quality</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Quality</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Data Quality</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -130,13 +130,13 @@ const Services = () => {
 
               {/* Service 6 */}
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] bg-gradient-to-br from-orange-50 to-orange-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-coral transition-colors">
+                <div className="aspect-[4/3] bg-gradient-to-br from-emerald-50 to-emerald-100/50 mb-6 overflow-hidden rounded-2xl relative border border-gray-200 group-hover:border-green transition-colors">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <BarChart className="text-coral/20 group-hover:text-coral/40 transition-colors" size={64} />
+                    <BarChart className="text-green/20 group-hover:text-green/40 transition-colors" size={64} />
                   </div>
                 </div>
                 <div className="mb-3">
-                  <span className="text-sm text-coral uppercase tracking-wider font-medium">Management</span>
+                  <span className="text-sm text-green uppercase tracking-wider font-medium">Management</span>
                 </div>
                 <h3 className="text-2xl font-semibold text-foreground mb-3">Project Execution</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
@@ -171,7 +171,7 @@ const Services = () => {
               ].map((item, index) => (
                 <div key={index} className="bg-white border border-gray-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-12 h-12 bg-coral text-white rounded-full flex items-center justify-center font-bold text-xl">
+                    <div className="flex-shrink-0 w-12 h-12 bg-green text-white rounded-full flex items-center justify-center font-bold text-xl">
                       {item.step}
                     </div>
                     <div>
@@ -189,7 +189,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section - Matching Platinum Style */}
-      <section className="py-24 md:py-32 bg-coral">
+      <section className="py-24 md:py-32 bg-green">
         <div className="container mx-auto px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Let's Discuss Your Project
@@ -200,7 +200,7 @@ const Services = () => {
           </p>
           <a
             href="/discovery"
-            className="inline-flex items-center justify-center gap-2 bg-white text-coral px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-white text-green px-8 py-4 rounded-full font-medium hover:bg-white/90 transition-colors"
           >
             Schedule Consultation
             <ArrowRight className="h-4 w-4" />

@@ -9,6 +9,13 @@ import platinumLogo from "@/assets/Platinum/platinumblue3.png";
 import rubyLogo from "@/assets/Ruby/rubyred3.png";
 import skyLogo from "/images/Sky.png";
 import okoLogo from "@/assets/logos/oko.png";
+import beatgridLogo from "@/assets/logos/beatgrid.svg";
+import mrsLogo from "@/assets/logos/mrs.svg";
+import tsapiLogo from "@/assets/logos/tsapi.png";
+import channel4Logo from "@/assets/logos/channel4.png";
+import globalDataLogo from "@/assets/logos/globaldata.png";
+import intentBasedLeadershipLogo from "@/assets/logos/intent-based-leadership.webp";
+import fansTrackLogo from "@/assets/logos/fanstrack.png";
 
 const Index = () => {
   return (
@@ -73,18 +80,22 @@ const Index = () => {
               alt="OKO"
               style={{ width: 90, height: 'auto' }}
             />
-            {/* Placeholder logos - replace with actual assets */}
-            <span className="text-charcoal/60 font-semibold text-lg">Beat Grid</span>
-            <span className="text-charcoal/60 font-semibold text-lg">Global Data</span>
-            <span className="text-charcoal/60 font-semibold text-lg">Channel 4</span>
-            <span className="text-charcoal/60 font-semibold text-lg">Intent Based Leadership</span>
-            <span className="text-charcoal/60 font-semibold text-lg">Fans Track</span>
+            {/* Logo with dark background for white logo */}
+            <div className="bg-charcoal rounded-md px-3 py-2">
+              <img src={beatgridLogo} alt="Beat Grid" className="h-6 w-auto" />
+            </div>
+            <img src={globalDataLogo} alt="Global Data" className="h-8 w-auto object-contain" />
+            <img src={channel4Logo} alt="Channel 4" className="h-10 w-auto max-w-[140px]" />
+            <img src={intentBasedLeadershipLogo} alt="Intent Based Leadership" className="h-10 w-auto max-w-[140px]" />
+            <img src={fansTrackLogo} alt="Fans Track" className="h-10 w-auto max-w-[140px]" />
           </div>
           {/* Industry Bodies */}
           <div className="flex flex-wrap justify-center items-center gap-8 mt-6 pt-6 border-t border-gray-100">
             <p className="text-xs text-charcoal/40 mr-4">Industry associations:</p>
-            <span className="text-charcoal/50 font-medium">MRS</span>
-            <span className="text-charcoal/50 font-medium">TSAPI</span>
+            <img src={mrsLogo} alt="Market Research Society" className="h-12 w-auto" />
+            <div className="bg-charcoal rounded-md px-3 py-2">
+              <img src={tsapiLogo} alt="TSAPI" className="h-12 w-auto" />
+            </div>
           </div>
         </div>
       </section>

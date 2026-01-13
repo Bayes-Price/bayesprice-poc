@@ -69,7 +69,7 @@ const DiscoveryLanding = () => {
                         <Button
                             size="lg"
                             onClick={scrollToForm}
-                            className="bg-yellow hover:bg-yellow/90 text-charcoal rounded-lg px-8 py-6 text-base font-medium transition-all"
+                            className="bg-green hover:bg-green/90 text-white rounded-full px-8 py-6 text-base font-medium transition-all"
                         >
                             Book Your Discovery Session
                             <ArrowRight className="ml-2 h-5 w-5" />
@@ -371,7 +371,7 @@ const DiscoveryLanding = () => {
                             <Button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full bg-yellow hover:bg-yellow/90 text-charcoal rounded-lg py-6 text-lg font-medium transition-all"
+                                className="w-full bg-green hover:bg-green/90 text-white rounded-full py-6 text-lg font-medium transition-all"
                             >
                                 {isSubmitting ? "Submitting..." : "Request Discovery Session"}
                             </Button>
