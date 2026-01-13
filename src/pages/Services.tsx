@@ -20,7 +20,7 @@ const Services = () => {
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
               Expert support from data connection to final delivery. Our team combines technical
-              expertise with deep market research knowledge to ensure your success.
+              expertise with deep knowledge of the insight profession, to ensure your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-coral hover:bg-coral/90 text-white rounded-lg px-8 py-6 text-base font-medium" asChild>
