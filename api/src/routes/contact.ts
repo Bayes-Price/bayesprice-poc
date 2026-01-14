@@ -31,13 +31,15 @@ router.post('/submit', async (req: Request, res: Response): Promise<void> => {
     const data = validationResult.data
     const submittedAt = new Date().toLocaleString()
 
-    // Create GitHub issue for tracking
-    const issue = await createContactIssue({
+    // Create GitHub issue for tracking (non-blocking)
+    createContactIssue({
       name: data.name,
       email: data.email,
       service: data.service,
       message: data.message,
       submittedAt,
+    }).catch(err => {
+      console.error('Failed to create GitHub issue:', err)
     })
 
     // Send email notifications
@@ -60,7 +62,6 @@ router.post('/submit', async (req: Request, res: Response): Promise<void> => {
       message: 'Contact form submitted successfully',
       data: {
         submitted_at: submittedAt,
-        issue_number: issue?.number,
       },
     })
   } catch (error) {
