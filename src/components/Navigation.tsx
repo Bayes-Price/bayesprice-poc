@@ -17,7 +17,9 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-300 rounded-full border ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl z-50 transition-all duration-300 border ${
+        isOpen ? "rounded-2xl" : "rounded-full"
+      } ${
         isScrolled
           ? "bg-white/80 backdrop-blur-md shadow-lg border-gray-200/50"
           : "bg-white/60 backdrop-blur-sm border-gray-200/30"
