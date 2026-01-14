@@ -18,7 +18,7 @@ export interface SubmissionResponse {
         submitted_at: string;
     };
     error?: string;
-    details?: any[];
+    details?: unknown[];
 }
 
 /**
@@ -76,7 +76,7 @@ export async function downloadSubmissionsCSV(): Promise<void> {
 /**
  * Get all submissions (admin function)
  */
-export async function getSubmissions(): Promise<any[]> {
+export async function getSubmissions(): Promise<unknown[]> {
     try {
         const response = await fetch(`${API_BASE_URL}/api/discovery/submissions`);
 

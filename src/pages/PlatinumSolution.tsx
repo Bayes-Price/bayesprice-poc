@@ -159,7 +159,7 @@ const PlatinumSolution = () => {
                 <div className="mb-3">
                   <span className="text-sm text-blue uppercase tracking-wider font-medium">Reporting</span>
                 </div>
-                <h3 className="text-2xl font-semibold text-foreground mb-3">Advanced Tabulation<</h3>
+                <h3 className="text-2xl font-semibold text-foreground mb-3">Advanced Tabulation</h3>
                 <p className="text-muted-foreground text-base leading-relaxed">
                   Generate complex data tables with filters, weighting, side and top nesting.  Significance tests as standard.
                 </p>

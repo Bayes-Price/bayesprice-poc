@@ -11,11 +11,15 @@ import skyLogo from "/images/Sky.png";
 import okoLogo from "@/assets/logos/oko.png";
 import beatgridLogo from "@/assets/logos/beatgrid.svg";
 import mrsLogo from "@/assets/logos/mrs.svg";
-import tsapiLogo from "@/assets/logos/tsapi.png";
 import channel4Logo from "@/assets/logos/channel4.png";
 import globalDataLogo from "@/assets/logos/globaldata.png";
 import intentBasedLeadershipLogo from "@/assets/logos/intent-based-leadership.webp";
 import fansTrackLogo from "@/assets/logos/fanstrack.png";
+import ascLogo from "@/assets/logos/ASClogo.png";
+import gdqLogo from "@/assets/logos/GDQ_LOGO_3.jpg";
+import icgLogo from "@/assets/logos/icg_logo.png";
+import trsLogo from "@/assets/logos/TRS.png";
+import tsapiMainLogo from "@/assets/logos/tsapi main logo black.png";
 
 const Index = () => {
   return (
@@ -94,8 +98,12 @@ const Index = () => {
             <p className="text-xs text-charcoal/40 mr-4">Industry associations:</p>
             <img src={mrsLogo} alt="Market Research Society" className="h-12 w-auto" />
             <div className="bg-charcoal rounded-md px-3 py-2">
-              <img src={tsapiLogo} alt="TSAPI" className="h-12 w-auto" />
+              <img src={tsapiMainLogo} alt="TSAPI" className="h-12 w-auto" />
             </div>
+            <img src={ascLogo} alt="ASC" className="h-12 w-auto" />
+            <img src={gdqLogo} alt="GDQ" className="h-12 w-auto" />
+            <img src={icgLogo} alt="ICG" className="h-12 w-auto" />
+            <img src={trsLogo} alt="TRS" className="h-12 w-auto" />
           </div>
         </div>
       </section>

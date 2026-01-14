@@ -158,8 +158,8 @@ const InsightsAnimation = () => {
     });
 
     // Animation progress (0-1)
-    let progress = { value: 0 };
-    let aiBeamY = { value: -100 };
+    const progress = { value: 0 };
+    const aiBeamY = { value: -100 };
     let time = 0;
     let animationFrameId: number;
 
