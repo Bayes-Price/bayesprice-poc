@@ -269,7 +269,7 @@ const About = () => {
               <div className="p-8 space-y-4">
                 <div className="flex items-start justify-between">
                   <div className="w-16 h-16 rounded-full bg-green/10 flex items-center justify-center text-green text-lg font-bold">
-                    AG
+                    AP
                   </div>
                   <a
                     href="https://www.linkedin.com/in/paa-600b2b347/"

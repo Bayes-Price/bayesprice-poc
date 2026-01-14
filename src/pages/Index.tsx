@@ -106,8 +106,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Data to Insights Animation - hidden on mobile */}
-      <div className="hidden md:block">
+      {/* Data to Insights Animation - hidden until story is refined */}
+      <div className="hidden">
         <InsightsAnimation />
       </div>
 
