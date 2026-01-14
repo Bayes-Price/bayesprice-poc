@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import InsightsAnimation from "@/components/InsightsAnimation";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import { ArrowRight } from "lucide-react";
-import dashboardImage from "@/assets/image.png";
 import platinumLogo from "@/assets/Platinum/platinumblue3.png";
 import rubyLogo from "@/assets/Ruby/rubyred3.png";
 import skyLogo from "/images/Sky.png";
@@ -55,14 +54,18 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Dashboard Screenshot */}
+          {/* Dashboard Video */}
           <div className="mt-16 mb-[-60px] max-w-5xl mx-auto">
             <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-200">
-              <img
-                src={dashboardImage}
-                alt="Bayes Price Dashboard"
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full"
-              />
+              >
+                <source src="/videos/platinum-intro.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
@@ -94,14 +97,16 @@ const Index = () => {
             <img src={fansTrackLogo} alt="Fans Track" className="h-10 w-auto max-w-[140px]" />
           </div>
           {/* Industry Bodies */}
-          <div className="flex flex-wrap justify-center items-center gap-8 mt-6 pt-6 border-t border-gray-100">
-            <p className="text-xs text-charcoal/40 mr-4">Industry associations:</p>
-            <img src={mrsLogo} alt="Market Research Society" className="h-12 w-auto" />
-            <img src={tsapiMainLogo} alt="TSAPI" className="h-12 w-auto" />
-            <img src={ascLogo} alt="ASC" className="h-12 w-auto" />
-            <img src={gdqLogo} alt="GDQ" className="h-12 w-auto" />
-            <img src={icgLogo} alt="ICG" className="h-12 w-auto" />
-            <img src={trsLogo} alt="TRS" className="h-12 w-auto" />
+          <div className="mt-6 pt-6 border-t border-gray-100">
+            <p className="text-sm text-charcoal/40 text-center mb-8">Industry associations</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              <img src={mrsLogo} alt="Market Research Society" className="h-12 w-auto" />
+              <img src={tsapiMainLogo} alt="TSAPI" className="h-12 w-auto" />
+              <img src={ascLogo} alt="ASC" className="h-12 w-auto" />
+              <img src={gdqLogo} alt="GDQ" className="h-12 w-auto" />
+              <img src={icgLogo} alt="ICG" className="h-12 w-auto" />
+              <img src={trsLogo} alt="TRS" className="h-12 w-auto" />
+            </div>
           </div>
         </div>
       </section>
@@ -163,6 +168,9 @@ const Index = () => {
       <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-charcoal text-center mb-12">
+              What our clients say
+            </h2>
             {/* Sky Logo */}
             <div className="flex justify-center mb-12">
               <img
