@@ -97,9 +97,7 @@ const Index = () => {
           <div className="flex flex-wrap justify-center items-center gap-8 mt-6 pt-6 border-t border-gray-100">
             <p className="text-xs text-charcoal/40 mr-4">Industry associations:</p>
             <img src={mrsLogo} alt="Market Research Society" className="h-12 w-auto" />
-            <div className="bg-charcoal rounded-md px-3 py-2">
-              <img src={tsapiMainLogo} alt="TSAPI" className="h-12 w-auto" />
-            </div>
+            <img src={tsapiMainLogo} alt="TSAPI" className="h-12 w-auto" />
             <img src={ascLogo} alt="ASC" className="h-12 w-auto" />
             <img src={gdqLogo} alt="GDQ" className="h-12 w-auto" />
             <img src={icgLogo} alt="ICG" className="h-12 w-auto" />
