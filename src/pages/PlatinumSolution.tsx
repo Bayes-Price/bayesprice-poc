@@ -45,8 +45,8 @@ const PlatinumSolution = () => {
             </div>
           </div>
 
-          {/* Dashboard Screenshot */}
-          <div className="max-w-5xl mx-auto mt-16">
+          {/* Dashboard Screenshot - hidden until real screenshots ready */}
+          <div className="hidden max-w-5xl mx-auto mt-16">
             <div className="rounded-xl shadow-2xl overflow-hidden border border-gray-200 bg-white">
               <img
                 src={platinumDashboard}
