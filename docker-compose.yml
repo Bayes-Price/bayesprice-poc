@@ -35,15 +35,7 @@ services:
       - .env.docker
     environment:
       DATABASE_URL: postgresql://bayesprice_user:${POSTGRES_PASSWORD:-bayesprice_dev_password}@postgres:5432/bayesprice
-      RESEND_API_KEY: ${RESEND_API_KEY}
-      RESEND_FROM_EMAIL: ${RESEND_FROM_EMAIL:-onboarding@resend.dev}
-      RESEND_TO_EMAIL: ${RESEND_TO_EMAIL:-info@bayesprice.com}
-      GITHUB_TOKEN: ${GITHUB_TOKEN}
-      GITHUB_OWNER: ${GITHUB_OWNER:-Bayes-Price}
-      GITHUB_REPO: ${GITHUB_REPO:-operations}
       PORT: 3001
-      NODE_ENV: ${NODE_ENV:-development}
-      FRONTEND_URL: ${FRONTEND_URL:-http://localhost:5173}
     ports:
       - "3009:3001"
     volumes:
